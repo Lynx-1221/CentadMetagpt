@@ -9,9 +9,12 @@ from metagpt.schema import Message
 from metagpt.actions import Action, UserRequirement
 from metagpt.roles import Role
 from metagpt.context import Context
+import numpy as np
 app = typer.Typer()
 
 graph_array = []
+
+
 
 def extract_array(rsp):
     result = []
@@ -23,6 +26,24 @@ def extract_array(rsp):
         result.append(temp)
     return result
 
+
+def edges_to_qubo(num_nodes, edges, one_indexed=True):
+    Q = np.zeros((num_nodes, num_nodes))
+    offset = 1 if one_indexed else 0
+    for i, j, w in edges:
+        '''
+        u, v = i - offset, j - offset
+        if u < 0 or v < 0 or u >= num_nodes or v >= num_nodes:
+            raise ValueError(f"Invalid node index in edge ({i}, {j}) for {num_nodes} nodes.")
+        '''
+        Q[i, i] -= w
+        Q[j, j] -= w
+        Q[i, j] += 2 * w
+        Q[j, i] += 2 * w
+    
+    return Q
+
+
 #Start with an agent to turn the real world situation to a combinatorial problem then do math formulation
 
 
@@ -32,7 +53,7 @@ class ProblemFormulation(Action):
     {instruction},
     create a continuous string of edges seperated by spaces in the format (x1,y1,w1) (x2,y2,w2),
     where the x and y represent the nodes that the lines connect, and w represents the weight of those edges,
-    Return ```Problem: your_nodes_here ```with NO other texts,
+    Return 'Problem: your_nodes_here' with NO other texts,
     Your edges:
     """
 
@@ -49,7 +70,7 @@ class ProblemFormulation(Action):
 
     @staticmethod
     def parse_code(rsp):
-        pattern = r"```Problem:([\s\S]*?)```"
+        pattern = r"'Problem:([\s\S]*?)'"
         match = re.search(pattern, rsp, re.DOTALL)
         code_text = match.group(1) if match else rsp
 
@@ -229,42 +250,13 @@ class QuboMatrixFormulator(Role):
 
 async def main():
     #replace idea with the code to put the file in.
-    problem = '''
-    Scenario: A company has 8 office clusters (nodes) that run different parts of a distributed application. Pairs of clusters communicate with known average bandwidth demand (edge weights, in Mbps). Each cluster also has a processing-capacity rating (node value, in arbitrary processing units). The IT team wants to split the 8 clusters into two groups (Group X and Group Y) so that cross-group communication is maximized — i.e.,
-    the sum of bandwidth of links that go between the groups is as large as possible (a weighted max-cut). 
-    Because latency-sensitive tasks should remain balanced across the two sites,
-    the total processing capacity in the two groups should not differ by more than 10 units.
-Nodes (cluster name — processing capacity):
-Alpha — 18
-Beta — 12
-Gamma — 15
-Delta — 10
-Epsilon — 14
-Zeta — 9
-Eta — 13
-Theta — 11
-Edges (unordered pair — bandwidth demand in Mbps):
-(Alpha, Beta) — 30
-(Alpha, Gamma) — 20
-(Alpha, Delta) — 5
-(Alpha, Epsilon) — 12
-(Beta, Gamma) — 25
-(Beta, Delta) — 8
-(Beta, Zeta) — 10
-(Gamma, Epsilon) — 18
-(Gamma, Eta) — 7
-(Delta, Zeta) — 22
-(Epsilon, Zeta) — 6
-(Epsilon, Theta) — 14
-(Zeta, Eta) — 11
-(Eta, Theta) — 9
-(Delta, Theta) — 4
-(Any pair not listed has bandwidth demand 0.)
-    '''
+    f = open("test_data/test2.txt")
+    problem = f.read()
+    f.close()
     idea: str = problem
     context = Context() # Load config2.yaml
     env = Environment(context=context)
-    env.add_roles([ProblemFormulator(), MathFormulator()])
+    env.add_roles([ProblemFormulator()])
     env.publish_message(Message(content=idea, send_to=ProblemFormulator)) # Send the user's message to Agent A to start the process.
     while not env.is_idle: # `env.is_idle` becomes True only when all agents have no new messages to process.
         await env.run()
@@ -272,7 +264,16 @@ Edges (unordered pair — bandwidth demand in Mbps):
 
 if __name__ == "__main__":
     fire.Fire(main)
+    
     G = nx.Graph()
     G.add_weighted_edges_from(graph_array)
-    nx.draw_planar(G, with_labels=True)
+    num_nodes = G.number_of_nodes()
+    node_list = list(G.nodes)
+    edge_list = []
+    for i in graph_array:
+        edge_list.append((node_list.index(i[0]), node_list.index(i[1]), i[2]))
+    arr = edges_to_qubo(num_nodes, edge_list)
+    print(arr)
+    nx.draw_spring(G, with_labels=True)
     plt.show()
+    
