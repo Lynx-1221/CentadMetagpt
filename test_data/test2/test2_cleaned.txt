@@ -1,0 +1,30 @@
+Word Problem — Splitting a Power Grid to Maximize Transmission Between Zones
+A regional electricity authority manages 10 substations that are connected with transmission lines of various capacities (in MW). Each substation has a demand/supply rating (positive = generation capacity, negative = demand load).
+Due to maintenance, the authority must split the substations into two operational zones (Zone A and Zone B). The goal is to maximize the total transmission capacity of lines that connect substations across the two zones, so that the zones can help balance each other’s loads through high-capacity interconnections.
+Substations (node values = net generation/demand in MW):
+North — +50 (generation)
+East — -30 (demand)
+South — -20 (demand)
+West — +40 (generation)
+Central — +60 (generation)
+Northeast — -25 (demand)
+Southeast — +35 (generation)
+Southwest — -15 (demand)
+Northwest — +20 (generation)
+Downtown — -40 (demand)
+Transmission lines (edges, with capacity in MW):
+(North, East) — 40
+(North, South) — 15
+(North, Central) — 50
+(East, Central) — 30
+(East, Northeast) — 20
+(South, Central) — 25
+(South, Southeast) — 35
+(West, Central) — 45
+(West, Southwest) — 20
+(Central, Southeast) — 40
+(Central, Downtown) — 60
+(Southwest, Downtown) — 25
+(Northwest, Downtown) — 30
+(Northwest, North) — 10
+(Northeast, Southeast) — 15

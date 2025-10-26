@@ -14,14 +14,20 @@ app = typer.Typer()
 
 graph_array = []
 
-
+def clean(text):
+    prev = ""
+    for i in range(len(text)):
+        if text[i] == " " and prev != ")":
+            text = text[:i] + "_" + text[i+1:]
+        prev = text[i]
+    return text
 
 def extract_array(rsp):
     result = []
     rsp = rsp.split(" ")
     for i in rsp:
         temp = i[1:-1].split(",")
-        temp[2] = int(temp[2])
+        temp[2] = float(temp[2])
         temp = tuple(temp)
         result.append(temp)
     return result
@@ -43,8 +49,26 @@ def edges_to_qubo(num_nodes, edges, one_indexed=True):
     
     return Q
 
+# timeit - third party tool used to possibly benchmark
+# scipy 
+# test how different llms react to the same prompt
 
-#Start with an agent to turn the real world situation to a combinatorial problem then do math formulation
+### Possible benchmark script : 
+    # -proper validation of matrix, mathematical formulations
+    # -Given the same prompt, which llm would be able to generate 
+    #  the correct matrix within a certain amount of time
+    # -How robust the llm/agent is when there are some amounts of randomness implemented
+    # -Can inject random errors into the prompt e.g. grammar, misplaced words
+
+# Consider what sort of problems our project solves
+# -Finding better algorithms for solving combinatorial problems
+# -Finding why QUBO is important
+# -Showcase that combination of ai agents and programming can resolve the critical
+#  bottleneck of turning problems into QUBO formulations
+
+
+# Start with an agent to turn the real world situation to a combinatorial problem then do math formulation
+
 
 
 class ProblemFormulation(Action):
@@ -73,9 +97,10 @@ class ProblemFormulation(Action):
         pattern = r"'Problem:([\s\S]*?)'"
         match = re.search(pattern, rsp, re.DOTALL)
         code_text = match.group(1) if match else rsp
-
+        code_text = clean(code_text)
+        print(code_text.split("Problem:_"))
         global graph_array
-        graph_array = extract_array(code_text.split("Problem: ")[1])
+        graph_array = extract_array(code_text.split("Problem:_")[1])
 
         return code_text
     
@@ -91,9 +116,10 @@ class ProblemFormulator(Role):
     async def _act(self) -> Message:
         ans = await self.rc.todo.run(self.rc.history)
         if ans[:7] == "Problem":
-            self.rc.env.publish_message(Message(content=ans, cause_by=ProblemFormulation, send_to=MathFormulator)) 
+            self.rc.env.publish_message(Message(content=ans, cause_by=ProblemFormulation)) 
         return None
 
+'''
 
 class MathFormulation(Action):
 
@@ -247,10 +273,11 @@ class QuboMatrixFormulator(Role):
 
         return msg
 
+'''
 
-async def main():
+async def agents(filepath="test_data/test2/test2_cleaned.txt"):
     #replace idea with the code to put the file in.
-    f = open("test_data/test2.txt")
+    f = open(filepath)
     problem = f.read()
     f.close()
     idea: str = problem
@@ -260,20 +287,33 @@ async def main():
     env.publish_message(Message(content=idea, send_to=ProblemFormulator)) # Send the user's message to Agent A to start the process.
     while not env.is_idle: # `env.is_idle` becomes True only when all agents have no new messages to process.
         await env.run()
+    global graph_array
+    return graph_array
 
 
-if __name__ == "__main__":
-    fire.Fire(main)
-    
+#Function to turn the graph array into a network x graph
+def graphing(graph_array):
+    #Generates graph
     G = nx.Graph()
+    # Adds edges with text labels for nodes
     G.add_weighted_edges_from(graph_array)
+    #Gets number of nodes
     num_nodes = G.number_of_nodes()
+    #Puts nodes into a list
     node_list = list(G.nodes)
+    #Turn nodes into integers for numpy matrix formulation
     edge_list = []
     for i in graph_array:
         edge_list.append((node_list.index(i[0]), node_list.index(i[1]), i[2]))
     arr = edges_to_qubo(num_nodes, edge_list)
+    # Prints numpy array
     print(arr)
+    # Draws the graph
     nx.draw_spring(G, with_labels=True)
     plt.show()
+
+if __name__ == "__main__":
+    fire.Fire(agents)
+    graphing(graph_array) 
+    
     

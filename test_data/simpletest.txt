@@ -1,0 +1,19 @@
+'''
+    10 nodes v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, 
+    with weights of edges as follows,
+    edge v1v2 has weight 5,
+    edge v1v3 has weight 3,
+    edge v1v5 has weight 4,
+    edge v2v4 has weight 6,
+    edge v2v6 has weight 2,
+    edge v3v4 has weight 7,
+    edge v3v7 has weight 5,
+    edge v4v8 has weight 8,
+    edge v5v6 has weight 3,
+    edge v5v9 has weight 4,
+    edge v6v10 has weight 6,
+    edge v7v8 has weight 2,
+    edge v8v9 has weight 7,
+    edge v9v10 has weight 5,
+    edge v1v10 has weight 1
+    '''
