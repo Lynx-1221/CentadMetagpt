@@ -1,0 +1,68 @@
+Scenario:
+A cloud platform operator runs 20 microservice clusters distributed across a continental backbone. Each cluster handles a distinct slice of the application (data ingestion, auth, analytics, caching, etc.) and has a known processing-capacity rating (in abstract compute units). Pairs of clusters exchange predictable daily traffic (average bandwidth in Mbps) on the control plane and for data replication. The operations team must split the 20 clusters into two synchronized deployment sites — Site X and Site Y — to maximize cross-site bandwidth (i.e., the sum of bandwidths of links that go between the two sites). This improves fault-tolerance and cross-site throughput for critical replications. At the same time, because latency-sensitive services must stay balanced, the difference in total processing capacity between Site X and Site Y must not exceed 20 units. The team will evaluate partitions of the 20 clusters subject to this capacity-balance constraint and select the partition that yields the largest cross-site bandwidth (a weighted Max-Cut under a capacity-balance constraint).
+
+Clusters (name — processing capacity):
+Aster — 24
+Brizo — 16
+Ceto — 20
+Dione — 12
+Eos — 18
+Faun — 14
+Gael — 22
+Hesper — 11
+Ione — 15
+Juno — 19
+Kora — 13
+Leda — 10
+Maia — 17
+Nereus — 21
+Okean — 9
+Phoebe — 23
+Quinto — 8
+Rhea — 25
+Selas — 12
+Thale — 14
+
+Inter-cluster bandwidths (unordered pair — Mbps):
+(Aster, Brizo) — 36
+(Aster, Ceto) — 22
+(Aster, Dione) — 6
+(Aster, Eos) — 14
+(Brizo, Ceto) — 18
+(Brizo, Faun) — 9
+(Brizo, Hesper) — 7
+(Ceto, Gael) — 29
+(Ceto, Ione) — 11
+(Dione, Kora) — 12
+(Dione, Leda) — 4
+(Eos, Juno) — 20
+(Eos, Maia) — 13
+(Faun, Nereus) — 17
+(Faun, Okean) — 5
+(Gael, Phoebe) — 31
+(Gael, Quinto) — 8
+(Hesper, Ione) — 10
+(Hesper, Rhea) — 3
+(Ione, Juno) — 16
+(Juno, Kora) — 7
+(Kora, Leda) — 9
+(Leda, Maia) — 6
+(Maia, Nereus) — 19
+(Maia, Okean) — 4
+(Nereus, Phoebe) — 27
+(Nereus, Quinto) — 12
+(Okean, Rhea) — 15
+(Phoebe, Quinto) — 10
+(Phoebe, Selas) — 14
+(Quinto, Selas) — 5
+(Rhea, Selas) — 11
+(Rhea, Thale) — 13
+(Selas, Thale) — 8
+(Aster, Phoebe) — 9
+(Ceto, Nereus) — 6
+(Eos, Gael) — 7
+(Juno, Rhea) — 21
+(Ione, Selas) — 4
+(Gael, Maia) — 10
+
+(Any pair not listed above has bandwidth demand 0.)

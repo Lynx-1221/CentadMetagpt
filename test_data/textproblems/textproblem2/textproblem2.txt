@@ -1,0 +1,35 @@
+Market Research Department – Internal Notes (Q3 Review)
+
+The company’s consumer electronics line now has 18 active products across different markets. Recent customer surveys, sales reports, and retail partner interviews suggest that several product offerings are beginning to cannibalize each other, while others complement each other strongly. Management is considering splitting the product portfolio into two strategic business lines to reduce internal competition and improve market clarity.
+
+Observations:
+
+- Product A (SmartHome Hub) and Product C (Budget Home Hub Mini) have overlapping feature sets and target the same demographic of price-sensitive smart home users. Sales partners in Europe and Southeast Asia have noted that when C is stocked, sales of A drop significantly. Conversely, in premium markets, A performs better on its own. Likely significant competition between A and C.
+
+- Product D (Enterprise Security Router) and Product A operate in completely different markets and generally do not share customer segments. However, when sold together as a bundle, B2B partners report increased conversions. Weak or neutral competition, possibly slight complementarity.
+
+- Product E (Portable Projector) and Product F (High-Lumen Projector) often work well in retail shelf placement. Customers either buy entry level (E) or high-end (F), with minimal overlap. Sales data suggests that cross-showroom comparison increases overall purchases. Strong complementarity.
+
+- Product G (Student Laptop) and Product H (Chromebook) compete heavily during back-to-school periods. H is cheaper but G has better performance. When H is discounted, G drops dramatically in volume. Strong competitive cannibalization here.
+
+- Product I (Wireless Keyboard) and Product J (Mechanical Keyboard) are frequently bought together or recommended in bundles, especially in online sales funnels. Cross-accessories drive additional revenue.
+
+- Product K (Gaming Mouse) competes with Product J because many enthusiasts only buy one premium peripheral per quarter, according to online buyer feedback logs. However, some users do pair J and K for high-end setups. Mixed relationship — depends on customer segment.
+
+- Retailer interviews in Japan and Korea show that Product L (Beginner DSLR) and Product M (Mirrorless Camera) compete almost directly. When M launched, L's monthly sales dropped by 39%. Heavy cannibalization suspected.
+
+- Product N (Noise-Canceling Headphones) and Product O (Wireless Earbuds) have complementary purchasing patterns. Many buyers first purchase O and upgrade to N later. Marketing analysts call this a “two-step funnel.” Strong complementarity.
+
+- Product P (Conference Microphone) has weak relationships with most products except F and N, where bundles sometimes increase B2B ordering. This might indicate mild complementarity but not strong.
+
+- Customer feedback analysis suggests that Product Q (Travel Portable SSD) is partly cannibalized by Product R (Cloud Backup Plan Subscription). Customers who move to subscription storage services often stop buying physical storage devices. Strong competition.
+
+Strategic Objective:
+
+Management wants to divide the 18 products into two business lines that:
+- Reduce direct cross-cannibalization between highly similar SKUs.
+- Maintain or maximize positive bundling effects between complementary products.
+- Ensure that products targeting completely different markets do not end up competing for the same marketing budget or shelf space.
+- Output must explain and justify the reasoning behind the grouping.
+
+All products must be assigned to one of the two portfolios.

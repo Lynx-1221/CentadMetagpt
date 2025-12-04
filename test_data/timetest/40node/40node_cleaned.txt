@@ -1,0 +1,173 @@
+Scenario:
+A global cloud operator manages 40 microservice clusters that together run a large, distributed application. Each cluster has a known processing-capacity rating (in abstract compute units) and pairs of clusters exchange measured daily traffic (average bandwidth in Mbps) for replication, state sync, and control-plane messaging. The operations team will deploy the clusters across two synchronized sites — Site East and Site West — and wants to maximize cross-site bandwidth (i.e., the sum of bandwidths of links that cross the partition), so that high-traffic pairs are intentionally split to improve replication throughput and fault-tolerance. To ensure latency-sensitive workloads remain balanced, the difference in total processing capacity between Site East and Site West must not exceed 30 units. The team will evaluate partitions of the 40 clusters under this capacity-balance constraint and select the partition that yields the largest cross-site bandwidth (a weighted Max-Cut with a capacity constraint).
+
+Clusters (name — processing capacity):
+
+Apollo — 26
+
+Boreas — 18
+
+Calliope — 22
+
+Demeter — 14
+
+Echo — 20
+
+Flora — 12
+
+Gaia — 24
+
+Helios — 28
+
+Iris — 16
+
+Janus — 15
+
+Kronos — 21
+
+Lyra — 13
+
+Maia — 19
+
+Nereus — 23
+
+Orion — 17
+
+Phoebe — 25
+
+Quillon — 11
+
+Rhea — 27
+
+Selene — 10
+
+Thalia — 9
+
+Ursa — 20
+
+Vesta — 14
+
+Wyvern — 12
+
+Xanthe — 16
+
+Yara — 18
+
+Zephyr — 13
+
+Astra — 22
+
+Brizo — 15
+
+Ceto — 21
+
+Dione — 11
+
+Eos — 17
+
+Faun — 12
+
+Gael — 19
+
+Hesper — 10
+
+Ione — 16
+
+Juno — 24
+
+Kora — 13
+
+Leda — 14
+
+Nix — 8
+
+Okean — 18
+
+Inter-cluster bandwidths (unordered pair — Mbps):
+
+(Apollo, Boreas) — 38
+(Apollo, Calliope) — 24
+(Apollo, Helios) — 30
+(Apollo, Rhea) — 12
+(Boreas, Calliope) — 20
+(Boreas, Echo) — 15
+(Boreas, Gaia) — 9
+(Calliope, Gaia) — 28
+(Calliope, Kronos) — 18
+(Demeter, Echo) — 7
+(Demeter, Flora) — 6
+(Echo, Helios) — 22
+(Echo, Iris) — 11
+(Flora, Lyra) — 8
+(Flora, Quillon) — 5
+(Gaia, Kronos) — 26
+(Gaia, Nereus) — 16
+(Helios, Phoebe) — 33
+(Helios, Orion) — 14
+(Iris, Janus) — 10
+(Iris, Ione) — 9
+(Janus, Lyra) — 6
+(Kronos, Maia) — 17
+(Kronos, Ceto) — 13
+(Lyra, Quillon) — 4
+(Maia, Nereus) — 21
+(Maia, Eos) — 12
+(Nereus, Phoebe) — 29
+(Nereus, Gael) — 15
+(Orion, Phoebe) — 11
+(Orion, Eos) — 8
+(Phoebe, Rhea) — 27
+(Phoebe, Astra) — 10
+(Quillon, Selene) — 7
+(Rhea, Ursa) — 14
+(Selene, Thalia) — 5
+(Thalia, Wyvern) — 6
+(Ursa, Vesta) — 16
+(Ursa, Zephyr) — 9
+(Vesta, Xanthe) — 8
+(Wyvern, Yara) — 10
+(Xanthe, Yara) — 12
+(Yara, Zephyr) — 7
+(Zephyr, Astra) — 6
+(Astra, Brizo) — 20
+(Brizo, Ceto) — 9
+(Ceto, Dione) — 11
+(Ceto, Gael) — 14
+(Dione, Faun) — 5
+(Eos, Faun) — 13
+(Eos, Ione) — 7
+(Faun, Gael) — 10
+(Gael, Hesper) — 8
+(Hesper, Ione) — 4
+(Hesper, Juno) — 9
+(Ione, Juno) — 18
+(Juno, Kora) — 12
+(Juno, Leda) — 11
+(Kora, Leda) — 6
+(Kora, Nix) — 3
+(Leda, Nix) — 5
+(Nix, Okean) — 7
+(Nereus, Okean) — 10
+(Phoebe, Okean) — 9
+(Apollo, Astra) — 8
+(Calliope, Juno) — 7
+(Boreas, Zephyr) — 6
+(Gaia, Leda) — 5
+(Orion, Xanthe) — 11
+(Brizo, Quillon) — 4
+(Demeter, Selene) — 6
+(Flora, Vesta) — 5
+(Maia, Wyvern) — 8
+(Yara, Okean) — 9
+(Thalia, Selene) — 4
+(Rhea, Gaia) — 13
+(Kronos, Juno) — 10
+(Astra, Nereus) — 12
+(Ceto, Phoebe) — 11
+(Gael, Apollo) — 7
+(Echo, Calliope) — 9
+(Vesta, Leda) — 6
+(Iris, Gaia) — 5
+(Xanthe, Zephyr) — 8
+
+(Any pair not listed above has bandwidth demand 0.)
