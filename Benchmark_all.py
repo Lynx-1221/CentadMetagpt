@@ -38,15 +38,16 @@ def benchmark_accuracy(correct, result):
                 
     extra_rows = abs(correct_rows - result_rows)
     extra_cols = abs(correct_cols - result_cols)
-    wrong_cells = extra_cols * extra_rows
+    wrong_cells = (extra_cols * result_rows) + (extra_rows * result_cols)
     total_cells = correct_cols * correct_rows
+    penalty_factor = 5
 
     if total_cells > 0:
-        mismatch_ratio = wrong_cells / total_cells
-        max_error_scale = 100.0
-        penalty = mismatch_ratio * (max_error_scale - mse_common)
+        penalty = wrong_cells*penalty_factor
     else:
         penalty = 0
+
+    print(f"Penalty is {penalty}")
                 
     final_mse = mse_common + penalty
 
@@ -67,7 +68,7 @@ def benchmark_accuracy(correct, result):
         },
     }
                 
-    # print(comparison_result)
+    print(comparison_result)
     return final_mse
 
 def benchmark_accuracy_time(results, folders): 
@@ -82,7 +83,7 @@ def benchmark_accuracy_time(results, folders):
 
                 mses[number] = benchmark_accuracy(correct, result)
  
-            except:
+            except: 
                 print("No correct matrix to check against")
     return mses
                 
@@ -116,55 +117,65 @@ def benchmark_time():
     folders = get_folders_os_listdir("test_data/timetest")
     folder_times = {}
     results = {}
-    '''
-    folder = "test_data/timetest/8node"
-    number = int((folder.split("/")[2]+"_cleaned.txt").split("node")[0])
-    print(folder.split("/")[2] + "_cleaned.txt")
-    folder_times[number] = round(timeit.timeit(lambda: run(folder+"/" + folder.split("/")[2] + "_cleaned.txt"), number=1), 4)
-    
-    results[number] = main.graphing(graph_array, False)
-
-    '''
     for folder in folders:
-        number = int((folder.split("/")[2]+"_cleaned.txt").split("node")[0])
-        # print(folder.split("/")[2] + "_cleaned.txt")
+        number = int((folder.split("/")[2]+"_cleaned.txt").split("edge")[0])
         folder_times[number] = round(timeit.timeit(lambda: run(folder+"/" + folder.split("/")[2] + "_cleaned.txt"), number=1), 4)
         results[number] = main.graphing(graph_array, False)
     
     return (folder_times, results)
 
-'''
-benchmark_times, results = benchmark_time()
 
+benchmark_times, results = benchmark_time()
 print(benchmark_times)
 print(benchmark_accuracy_time(results, folders))
-'''
+
 #benchmark accuracy
 
-accuracyfiles = get_files_in_directory("test_data/accuracytest")
-accuracyresults = {}
+grammarfiles = get_files_in_directory("test_data/accuracytest/grammar")
+structuralfiles = get_files_in_directory("test_data/accuracytest/structural")
+grammarresults = {}
+structuralresults = {}
 correct = np.loadtxt("test_data/accuracytest/correct.csv", delimiter=',')
-for file in accuracyfiles:
-    if file[-4:] != ".csv":
-        graph_array = asyncio.run(main.agents(file))
-        result = main.graphing(graph_array, False)
-        accuracyresults[file.split("golden")[1][:-4]] = benchmark_accuracy(correct, result)
-print(accuracyresults)
-accuracyresults = dict(sorted(accuracyresults.items()))
-x = list(accuracyresults.keys())
-y = list(accuracyresults.values())
-plt.plot(x, y, marker='o')
+
+for file in grammarfiles:
+    print(file)
+    graph_array = asyncio.run(main.agents(file))
+    result = main.graphing(graph_array, False)
+    grammarresults[int(file.split("golden")[1][:-4])] = benchmark_accuracy(correct, result)
+
+
+for file in structuralfiles:
+    print(file)
+    graph_array = asyncio.run(main.agents(file))
+    result = main.graphing(graph_array, False)
+    structuralresults[int(file.split("golden")[1][:-4])] = benchmark_accuracy(correct, result)
+
+
+structuralresults = dict(sorted(structuralresults.items()))
+grammarresults = dict(sorted(grammarresults.items()))
+print(grammarresults)
+print(structuralresults)
+
+x1 = list(grammarresults.keys())
+y1 = list(grammarresults.values())
+
+x2 = list(structuralresults.keys())
+y2 = list(structuralresults.values())
+
+plt.plot(x1, y1, marker='o', label="Spelling errors")
+plt.plot(x2, y2, marker='o', label="Structural errors")
+
 plt.xlabel("No. of errors")
 plt.ylabel("Mean square error with penalty")
 plt.title("Accuracy benchmark")
+plt.legend()
 plt.show()
 
-benchmark_times = {800: 132.9198, 20: 8.6017, 8: 4.2717, 10: 3.9645, 40: 21.3147, 200: 81.7174}
 benchmark_times = dict(sorted(benchmark_times.items()))
 x = list(benchmark_times.keys())
 y = list(benchmark_times.values())
 plt.plot(x, y, marker='o')
-plt.xlabel("No. of nodes")
+plt.xlabel("No. of edges")
 plt.ylabel("Time taken/s")
 plt.title("Time taken benchmark")
 plt.show()

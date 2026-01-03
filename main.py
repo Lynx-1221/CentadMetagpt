@@ -30,6 +30,7 @@ def extract_array(rsp):
     rsp = rsp.split(" ")
     for i in rsp:
         temp = i[1:-1].split(",")
+        print(temp)
         temp[2] = float(temp[2])
         temp = tuple(temp)
         result.append(temp)
@@ -57,10 +58,10 @@ class ProblemFormulation(Action):
     PROMPT_TEMPLATE: str = """
     Given the following word problem, 
     {instruction},
-    create a continuous string of edges seperated by spaces in the format (x1,y1,w1) (x2,y2,w2),
-    where the x and y represent the nodes that the lines connect, and w represents the weight of those edges,
-    make sure it is in that format,
-    Return 'Problem: your_edges_here',
+    select the part of the text that defines and describes the problem that needs to be solved, 
+    do not select the part of the text that describes the data about edges,
+    but text that describes the nodes is part of problem definition,
+    Return only the part of the text that you have selected with NO OTHER TEXT: 
     """
 
     name: str = "ProblemFormulation"
@@ -70,7 +71,48 @@ class ProblemFormulation(Action):
 
         rsp = await self._aask(prompt)
 
-        answer = ProblemFormulation.parse_code(rsp)
+        return rsp
+
+    
+class ProblemFormulator(Role):
+    name: str = "Klein"
+    profile: str = "ProblemFormulator"
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self._watch({UserRequirement})
+        self.set_actions([ProblemFormulation])
+
+    async def _act(self) -> Message:
+        todo = self.rc.todo 
+
+        msg = self.get_memories()
+        code_text = await todo.run(msg)
+        msg = Message(content=code_text, role=self.profile, cause_by=type(todo))
+
+        return msg
+
+class ListFormulation(Action):
+    PROMPT_TEMPLATE: str = """
+    Given the following word problem, 
+    {instruction},
+    create a continuous string of edges seperated by spaces in the format (x1,y1,w1) (x2,y2,w2),
+    there should always be 2 nodes and 1 weight for each edge, make sure to use comma to seperate,
+    where the x and y represent the nodes that the lines connect, and w represents the weight of those edges,
+    make sure it is in that format,
+    do not invent new edges that do not exist in the problem provided,
+    Return 'Problem: your_edges_here',
+    if there is no input, return "NO INPUT":
+    """
+
+    name: str = "ListFormulation"
+
+    async def run(self, instruction: str):
+        prompt = self.PROMPT_TEMPLATE.format(instruction=instruction)
+
+        rsp = await self._aask(prompt)
+
+        answer = ListFormulation.parse_code(rsp)
 
         return answer
 
@@ -83,42 +125,73 @@ class ProblemFormulation(Action):
 
         return code_text
     
-class ProblemFormulator(Role):
+class ListFormulator(Role):
     name: str = "David"
-    profile: str = "ProblemFormulator"
+    profile: str = "ListFormulator"
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self._watch({UserRequirement})
-        self.set_actions([ProblemFormulation])
+        self.set_actions([ListFormulation])
 
     async def _act(self) -> Message:
         todo = self.rc.todo 
 
-        msg = self.get_memories(k=1)[0] 
+        msg = self.get_memories(k=1)[0]
         code_text = await todo.run(msg.content)
         msg = Message(content=code_text, role=self.profile, cause_by=type(todo))
 
         return msg
 
 
-async def agents(filepath="test_data/timetest/10node/10node_cleaned.txt"):
+async def agents(filepath="test_data/timetest/200node/200node_cleaned.txt"):
     #replace idea with the code to put the file in.
     f = open(filepath)
-    problem = f.read()
+    text = f.read()
     f.close()
-    idea: str = problem
+    f = open(filepath)
+    lines = f.readlines()
+    f.close()
+    idea: str = text
     context = Context()
+
     role = ProblemFormulator(context=context)
-    # logger.info(idea)
-    result = str(await role.run(idea))
-    # logger.info(result)
-    graph_array = extract_array(result.split("Problem:_")[1])
+    role2 = ListFormulator(context=context)
+    problem = str(await role.run(idea))
+    
+    count = 0
+    data = problem
+    results = []
+
+    for line in lines:
+        if line.strip() not in problem:
+            if count == 100:
+                count = 0
+                ans = str(await role2.run(data))
+                try:
+                    ans = ans.split("Problem:_")[1]
+                    results.append(ans.strip())
+                except:
+                    pass
+                data = problem
+            else:
+                count += 1
+                data += " "+line
+
+    ans = str(await role2.run(data))
+    ans = ans.split("Problem:_")[1]
+    results.append(ans.strip())
+    
+    result = " ".join(results)
+    
+    graph_array = extract_array(result)
     return graph_array
+    
 
 
 #Function to turn the graph array into a network x graph
 def graphing(graph_array, graph=True):
+    print(graph_array)
     #Generates graph
     G = nx.Graph()
     # Adds edges with text labels for nodes
@@ -134,7 +207,7 @@ def graphing(graph_array, graph=True):
         edge_list.append((node_list.index(i[0]), node_list.index(i[1]), i[2]))
     arr = edges_to_qubo(num_nodes, edge_list)
 
-    # np.savetxt("correct.csv", arr, delimiter=",")
+    np.savetxt("correct.csv", arr, delimiter=",")
     
     # model = edgelist_string_nodes_to_qubo(graph_array)
     # Draws the graph
@@ -145,7 +218,7 @@ def graphing(graph_array, graph=True):
     return arr
 
 if __name__ == "__main__":
-    asyncio.run(agents("test_data/accuracytest/golden0.txt"))
+    graph_array = asyncio.run(agents("test_data/accuracytest/grammar/golden0.txt"))
     graphing(graph_array) 
 
     

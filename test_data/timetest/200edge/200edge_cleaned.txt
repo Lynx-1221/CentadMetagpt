@@ -1,0 +1,209 @@
+A large hospital is undergoing an internal reorganization.
+It wants to split its departments into two operational divisions.
+However, many departments experience coordination friction due to:
+Shared equipment
+Conflicting clinical workflows
+Data access bottlenecks
+Administrative and policy disagreements
+Each pairwise friction has a severity level.
+The hospital wants to partition departments such that the total friction across the two divisions is maximized.
+There is a coordination friction level of 2 between Emergency Department and Cardiology.
+There is a coordination friction level of 3 between Emergency Department and Neurology.
+There is a coordination friction level of 4 between Emergency Department and Oncology.
+There is a coordination friction level of 5 between Emergency Department and Radiology.
+There is a coordination friction level of 6 between Emergency Department and Pediatrics.
+There is a coordination friction level of 7 between Emergency Department and Orthopedics.
+There is a coordination friction level of 8 between Emergency Department and General Surgery.
+There is a coordination friction level of 9 between Emergency Department and Anesthesiology.
+There is a coordination friction level of 1 between Emergency Department and ICU.
+There is a coordination friction level of 2 between Emergency Department and Pharmacy.
+There is a coordination friction level of 3 between Emergency Department and Pathology.
+There is a coordination friction level of 4 between Emergency Department and Laboratory Services.
+There is a coordination friction level of 5 between Emergency Department and Infectious Diseases.
+There is a coordination friction level of 6 between Emergency Department and Hospital IT.
+There is a coordination friction level of 7 between Emergency Department and Medical Records.
+There is a coordination friction level of 8 between Emergency Department and Billing & Insurance.
+There is a coordination friction level of 9 between Emergency Department and Facilities Management.
+There is a coordination friction level of 1 between Emergency Department and Procurement.
+There is a coordination friction level of 2 between Emergency Department and Human Resources.
+There is a coordination friction level of 3 between Emergency Department and Hospital Administration.
+There is a coordination friction level of 4 between Cardiology and Neurology.
+There is a coordination friction level of 5 between Cardiology and Oncology.
+There is a coordination friction level of 6 between Cardiology and Radiology.
+There is a coordination friction level of 7 between Cardiology and Pediatrics.
+There is a coordination friction level of 8 between Cardiology and Orthopedics.
+There is a coordination friction level of 9 between Cardiology and General Surgery.
+There is a coordination friction level of 1 between Cardiology and Anesthesiology.
+There is a coordination friction level of 2 between Cardiology and ICU.
+There is a coordination friction level of 3 between Cardiology and Pharmacy.
+There is a coordination friction level of 4 between Cardiology and Pathology.
+There is a coordination friction level of 5 between Cardiology and Laboratory Services.
+There is a coordination friction level of 6 between Cardiology and Infectious Diseases.
+There is a coordination friction level of 7 between Cardiology and Hospital IT.
+There is a coordination friction level of 8 between Cardiology and Medical Records.
+There is a coordination friction level of 9 between Cardiology and Billing & Insurance.
+There is a coordination friction level of 1 between Cardiology and Facilities Management.
+There is a coordination friction level of 2 between Cardiology and Procurement.
+There is a coordination friction level of 3 between Cardiology and Human Resources.
+There is a coordination friction level of 4 between Cardiology and Hospital Administration.
+There is a coordination friction level of 5 between Neurology and Oncology.
+There is a coordination friction level of 6 between Neurology and Radiology.
+There is a coordination friction level of 7 between Neurology and Pediatrics.
+There is a coordination friction level of 8 between Neurology and Orthopedics.
+There is a coordination friction level of 9 between Neurology and General Surgery.
+There is a coordination friction level of 1 between Neurology and Anesthesiology.
+There is a coordination friction level of 2 between Neurology and ICU.
+There is a coordination friction level of 3 between Neurology and Pharmacy.
+There is a coordination friction level of 4 between Neurology and Pathology.
+There is a coordination friction level of 5 between Neurology and Laboratory Services.
+There is a coordination friction level of 6 between Neurology and Infectious Diseases.
+There is a coordination friction level of 7 between Neurology and Hospital IT.
+There is a coordination friction level of 8 between Neurology and Medical Records.
+There is a coordination friction level of 9 between Neurology and Billing & Insurance.
+There is a coordination friction level of 1 between Neurology and Facilities Management.
+There is a coordination friction level of 2 between Neurology and Procurement.
+There is a coordination friction level of 3 between Neurology and Human Resources.
+There is a coordination friction level of 4 between Neurology and Hospital Administration.
+There is a coordination friction level of 5 between Oncology and Radiology.
+There is a coordination friction level of 6 between Oncology and Pediatrics.
+There is a coordination friction level of 7 between Oncology and Orthopedics.
+There is a coordination friction level of 8 between Oncology and General Surgery.
+There is a coordination friction level of 9 between Oncology and Anesthesiology.
+There is a coordination friction level of 1 between Oncology and ICU.
+There is a coordination friction level of 2 between Oncology and Pharmacy.
+There is a coordination friction level of 3 between Oncology and Pathology.
+There is a coordination friction level of 4 between Oncology and Laboratory Services.
+There is a coordination friction level of 5 between Oncology and Infectious Diseases.
+There is a coordination friction level of 6 between Oncology and Hospital IT.
+There is a coordination friction level of 7 between Oncology and Medical Records.
+There is a coordination friction level of 8 between Oncology and Billing & Insurance.
+There is a coordination friction level of 9 between Oncology and Facilities Management.
+There is a coordination friction level of 1 between Oncology and Procurement.
+There is a coordination friction level of 2 between Oncology and Human Resources.
+There is a coordination friction level of 3 between Oncology and Hospital Administration.
+There is a coordination friction level of 4 between Radiology and Pediatrics.
+There is a coordination friction level of 5 between Radiology and Orthopedics.
+There is a coordination friction level of 6 between Radiology and General Surgery.
+There is a coordination friction level of 7 between Radiology and Anesthesiology.
+There is a coordination friction level of 8 between Radiology and ICU.
+There is a coordination friction level of 9 between Radiology and Pharmacy.
+There is a coordination friction level of 1 between Radiology and Pathology.
+There is a coordination friction level of 2 between Radiology and Laboratory Services.
+There is a coordination friction level of 3 between Radiology and Infectious Diseases.
+There is a coordination friction level of 4 between Radiology and Hospital IT.
+There is a coordination friction level of 5 between Radiology and Medical Records.
+There is a coordination friction level of 6 between Radiology and Billing & Insurance.
+There is a coordination friction level of 7 between Radiology and Facilities Management.
+There is a coordination friction level of 8 between Radiology and Procurement.
+There is a coordination friction level of 9 between Radiology and Human Resources.
+There is a coordination friction level of 1 between Radiology and Hospital Administration.
+There is a coordination friction level of 2 between Pediatrics and Orthopedics.
+There is a coordination friction level of 3 between Pediatrics and General Surgery.
+There is a coordination friction level of 4 between Pediatrics and Anesthesiology.
+There is a coordination friction level of 5 between Pediatrics and ICU.
+There is a coordination friction level of 6 between Pediatrics and Pharmacy.
+There is a coordination friction level of 7 between Pediatrics and Pathology.
+There is a coordination friction level of 8 between Pediatrics and Laboratory Services.
+There is a coordination friction level of 9 between Pediatrics and Infectious Diseases.
+There is a coordination friction level of 1 between Pediatrics and Hospital IT.
+There is a coordination friction level of 2 between Pediatrics and Medical Records.
+There is a coordination friction level of 3 between Pediatrics and Billing & Insurance.
+There is a coordination friction level of 4 between Pediatrics and Facilities Management.
+There is a coordination friction level of 5 between Pediatrics and Procurement.
+There is a coordination friction level of 6 between Pediatrics and Human Resources.
+There is a coordination friction level of 7 between Pediatrics and Hospital Administration.
+There is a coordination friction level of 8 between Orthopedics and General Surgery.
+There is a coordination friction level of 9 between Orthopedics and Anesthesiology.
+There is a coordination friction level of 1 between Orthopedics and ICU.
+There is a coordination friction level of 2 between Orthopedics and Pharmacy.
+There is a coordination friction level of 3 between Orthopedics and Pathology.
+There is a coordination friction level of 4 between Orthopedics and Laboratory Services.
+There is a coordination friction level of 5 between Orthopedics and Infectious Diseases.
+There is a coordination friction level of 6 between Orthopedics and Hospital IT.
+There is a coordination friction level of 7 between Orthopedics and Medical Records.
+There is a coordination friction level of 8 between Orthopedics and Billing & Insurance.
+There is a coordination friction level of 9 between Orthopedics and Facilities Management.
+There is a coordination friction level of 1 between Orthopedics and Procurement.
+There is a coordination friction level of 2 between Orthopedics and Human Resources.
+There is a coordination friction level of 3 between Orthopedics and Hospital Administration.
+There is a coordination friction level of 4 between General Surgery and Anesthesiology.
+There is a coordination friction level of 5 between General Surgery and ICU.
+There is a coordination friction level of 6 between General Surgery and Pharmacy.
+There is a coordination friction level of 7 between General Surgery and Pathology.
+There is a coordination friction level of 8 between General Surgery and Laboratory Services.
+There is a coordination friction level of 9 between General Surgery and Infectious Diseases.
+There is a coordination friction level of 1 between General Surgery and Hospital IT.
+There is a coordination friction level of 2 between General Surgery and Medical Records.
+There is a coordination friction level of 3 between General Surgery and Billing & Insurance.
+There is a coordination friction level of 4 between General Surgery and Facilities Management.
+There is a coordination friction level of 5 between General Surgery and Procurement.
+There is a coordination friction level of 6 between General Surgery and Human Resources.
+There is a coordination friction level of 7 between General Surgery and Hospital Administration.
+There is a coordination friction level of 8 between Anesthesiology and ICU.
+There is a coordination friction level of 9 between Anesthesiology and Pharmacy.
+There is a coordination friction level of 1 between Anesthesiology and Pathology.
+There is a coordination friction level of 2 between Anesthesiology and Laboratory Services.
+There is a coordination friction level of 3 between Anesthesiology and Infectious Diseases.
+There is a coordination friction level of 4 between Anesthesiology and Hospital IT.
+There is a coordination friction level of 5 between Anesthesiology and Medical Records.
+There is a coordination friction level of 6 between Anesthesiology and Billing & Insurance.
+There is a coordination friction level of 7 between Anesthesiology and Facilities Management.
+There is a coordination friction level of 8 between Anesthesiology and Procurement.
+There is a coordination friction level of 9 between Anesthesiology and Human Resources.
+There is a coordination friction level of 1 between Anesthesiology and Hospital Administration.
+There is a coordination friction level of 2 between ICU and Pharmacy.
+There is a coordination friction level of 3 between ICU and Pathology.
+There is a coordination friction level of 4 between ICU and Laboratory Services.
+There is a coordination friction level of 5 between ICU and Infectious Diseases.
+There is a coordination friction level of 6 between ICU and Hospital IT.
+There is a coordination friction level of 7 between ICU and Medical Records.
+There is a coordination friction level of 8 between ICU and Billing & Insurance.
+There is a coordination friction level of 9 between ICU and Facilities Management.
+There is a coordination friction level of 1 between ICU and Procurement.
+There is a coordination friction level of 2 between ICU and Human Resources.
+There is a coordination friction level of 3 between ICU and Hospital Administration.
+There is a coordination friction level of 4 between Pharmacy and Pathology.
+There is a coordination friction level of 5 between Pharmacy and Laboratory Services.
+There is a coordination friction level of 6 between Pharmacy and Infectious Diseases.
+There is a coordination friction level of 7 between Pharmacy and Hospital IT.
+There is a coordination friction level of 8 between Pharmacy and Medical Records.
+There is a coordination friction level of 9 between Pharmacy and Billing & Insurance.
+There is a coordination friction level of 1 between Pharmacy and Facilities Management.
+There is a coordination friction level of 2 between Pharmacy and Procurement.
+There is a coordination friction level of 3 between Pharmacy and Human Resources.
+There is a coordination friction level of 4 between Pharmacy and Hospital Administration.
+There is a coordination friction level of 5 between Pathology and Laboratory Services.
+There is a coordination friction level of 6 between Pathology and Infectious Diseases.
+There is a coordination friction level of 7 between Pathology and Hospital IT.
+There is a coordination friction level of 8 between Pathology and Medical Records.
+There is a coordination friction level of 9 between Pathology and Billing & Insurance.
+There is a coordination friction level of 1 between Pathology and Facilities Management.
+There is a coordination friction level of 2 between Pathology and Procurement.
+There is a coordination friction level of 3 between Pathology and Human Resources.
+There is a coordination friction level of 4 between Pathology and Hospital Administration.
+There is a coordination friction level of 5 between Laboratory Services and Infectious Diseases.
+There is a coordination friction level of 6 between Laboratory Services and Hospital IT.
+There is a coordination friction level of 7 between Laboratory Services and Medical Records.
+There is a coordination friction level of 8 between Laboratory Services and Billing & Insurance.
+There is a coordination friction level of 9 between Laboratory Services and Facilities Management.
+There is a coordination friction level of 1 between Laboratory Services and Procurement.
+There is a coordination friction level of 2 between Laboratory Services and Human Resources.
+There is a coordination friction level of 3 between Laboratory Services and Hospital Administration.
+There is a coordination friction level of 4 between Infectious Diseases and Hospital IT.
+There is a coordination friction level of 5 between Infectious Diseases and Medical Records.
+There is a coordination friction level of 6 between Infectious Diseases and Billing & Insurance.
+There is a coordination friction level of 7 between Infectious Diseases and Facilities Management.
+There is a coordination friction level of 8 between Infectious Diseases and Procurement.
+There is a coordination friction level of 9 between Infectious Diseases and Human Resources.
+There is a coordination friction level of 1 between Infectious Diseases and Hospital Administration.
+There is a coordination friction level of 2 between Hospital IT and Medical Records.
+There is a coordination friction level of 3 between Hospital IT and Billing & Insurance.
+There is a coordination friction level of 4 between Hospital IT and Facilities Management.
+There is a coordination friction level of 5 between Hospital IT and Procurement.
+There is a coordination friction level of 6 between Hospital IT and Human Resources.
+There is a coordination friction level of 7 between Hospital IT and Hospital Administration.
+There is a coordination friction level of 8 between Medical Records and Billing & Insurance.
+There is a coordination friction level of 9 between Medical Records and Facilities Management.
+There is a coordination friction level of 1 between Medical Records and Procurement.
+There is a coordination friction level of 2 between Medical Records and Human Resources.
+There is a coordination friction level of 3 between Medical Records and Hospital Administration.

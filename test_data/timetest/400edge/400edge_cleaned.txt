@@ -1,0 +1,408 @@
+A large university operates a multidisciplinary research consortium consisting of 30 research labs, centers, and departments.
+Due to:
+Competition for grants and funding
+Overlapping research domains
+Data ownership and IP disputes
+Shared infrastructure constraints
+many pairs of research units experience collaboration friction.
+University leadership wants to divide the units into two strategic consortia such that the total friction between the two groups is maximized.
+There is a collaboration friction level of 2 between AI Research Lab and Robotics Lab.
+There is a collaboration friction level of 3 between AI Research Lab and Quantum Computing Group.
+There is a collaboration friction level of 4 between AI Research Lab and Bioinformatics Unit.
+There is a collaboration friction level of 5 between AI Research Lab and Cybersecurity Center.
+There is a collaboration friction level of 6 between AI Research Lab and Data Science Institute.
+There is a collaboration friction level of 7 between AI Research Lab and Human-Computer Interaction Lab.
+There is a collaboration friction level of 8 between AI Research Lab and Computer Vision Group.
+There is a collaboration friction level of 9 between AI Research Lab and Natural Language Processing Lab.
+There is a collaboration friction level of 1 between AI Research Lab and Systems Engineering Dept.
+There is a collaboration friction level of 2 between AI Research Lab and Embedded Systems Lab.
+There is a collaboration friction level of 3 between AI Research Lab and Networks & Communications Group.
+There is a collaboration friction level of 4 between AI Research Lab and Software Engineering Lab.
+There is a collaboration friction level of 5 between AI Research Lab and Computational Biology Group.
+There is a collaboration friction level of 6 between AI Research Lab and Medical Imaging Lab.
+There is a collaboration friction level of 7 between AI Research Lab and FinTech Research Unit.
+There is a collaboration friction level of 8 between AI Research Lab and Climate Modeling Group.
+There is a collaboration friction level of 9 between AI Research Lab and Energy Systems Lab.
+There is a collaboration friction level of 1 between AI Research Lab and Materials Science Lab.
+There is a collaboration friction level of 2 between AI Research Lab and Autonomous Vehicles Lab.
+There is a collaboration friction level of 3 between AI Research Lab and Operations Research Group.
+There is a collaboration friction level of 4 between AI Research Lab and Statistics Department.
+There is a collaboration friction level of 5 between AI Research Lab and Applied Mathematics Unit.
+There is a collaboration friction level of 6 between AI Research Lab and High-Performance Computing Center.
+There is a collaboration friction level of 7 between AI Research Lab and Digital Ethics Institute.
+There is a collaboration friction level of 8 between AI Research Lab and Education Technology Lab.
+There is a collaboration friction level of 9 between AI Research Lab and Game Development Studio.
+There is a collaboration friction level of 1 between AI Research Lab and Smart Cities Research Hub.
+There is a collaboration friction level of 2 between AI Research Lab and Supply Chain Analytics Lab.
+There is a collaboration friction level of 3 between AI Research Lab and Econometrics Group.
+There is a collaboration friction level of 4 between Robotics Lab and Quantum Computing Group.
+There is a collaboration friction level of 5 between Robotics Lab and Bioinformatics Unit.
+There is a collaboration friction level of 6 between Robotics Lab and Cybersecurity Center.
+There is a collaboration friction level of 7 between Robotics Lab and Data Science Institute.
+There is a collaboration friction level of 8 between Robotics Lab and Human-Computer Interaction Lab.
+There is a collaboration friction level of 9 between Robotics Lab and Computer Vision Group.
+There is a collaboration friction level of 1 between Robotics Lab and Natural Language Processing Lab.
+There is a collaboration friction level of 2 between Robotics Lab and Systems Engineering Dept.
+There is a collaboration friction level of 3 between Robotics Lab and Embedded Systems Lab.
+There is a collaboration friction level of 4 between Robotics Lab and Networks & Communications Group.
+There is a collaboration friction level of 5 between Robotics Lab and Software Engineering Lab.
+There is a collaboration friction level of 6 between Robotics Lab and Computational Biology Group.
+There is a collaboration friction level of 7 between Robotics Lab and Medical Imaging Lab.
+There is a collaboration friction level of 8 between Robotics Lab and FinTech Research Unit.
+There is a collaboration friction level of 9 between Robotics Lab and Climate Modeling Group.
+There is a collaboration friction level of 1 between Robotics Lab and Energy Systems Lab.
+There is a collaboration friction level of 2 between Robotics Lab and Materials Science Lab.
+There is a collaboration friction level of 3 between Robotics Lab and Autonomous Vehicles Lab.
+There is a collaboration friction level of 4 between Robotics Lab and Operations Research Group.
+There is a collaboration friction level of 5 between Robotics Lab and Statistics Department.
+There is a collaboration friction level of 6 between Robotics Lab and Applied Mathematics Unit.
+There is a collaboration friction level of 7 between Robotics Lab and High-Performance Computing Center.
+There is a collaboration friction level of 8 between Robotics Lab and Digital Ethics Institute.
+There is a collaboration friction level of 9 between Robotics Lab and Education Technology Lab.
+There is a collaboration friction level of 1 between Robotics Lab and Game Development Studio.
+There is a collaboration friction level of 2 between Robotics Lab and Smart Cities Research Hub.
+There is a collaboration friction level of 3 between Robotics Lab and Supply Chain Analytics Lab.
+There is a collaboration friction level of 4 between Robotics Lab and Econometrics Group.
+There is a collaboration friction level of 5 between Quantum Computing Group and Bioinformatics Unit.
+There is a collaboration friction level of 6 between Quantum Computing Group and Cybersecurity Center.
+There is a collaboration friction level of 7 between Quantum Computing Group and Data Science Institute.
+There is a collaboration friction level of 8 between Quantum Computing Group and Human-Computer Interaction Lab.
+There is a collaboration friction level of 9 between Quantum Computing Group and Computer Vision Group.
+There is a collaboration friction level of 1 between Quantum Computing Group and Natural Language Processing Lab.
+There is a collaboration friction level of 2 between Quantum Computing Group and Systems Engineering Dept.
+There is a collaboration friction level of 3 between Quantum Computing Group and Embedded Systems Lab.
+There is a collaboration friction level of 4 between Quantum Computing Group and Networks & Communications Group.
+There is a collaboration friction level of 5 between Quantum Computing Group and Software Engineering Lab.
+There is a collaboration friction level of 6 between Quantum Computing Group and Computational Biology Group.
+There is a collaboration friction level of 7 between Quantum Computing Group and Medical Imaging Lab.
+There is a collaboration friction level of 8 between Quantum Computing Group and FinTech Research Unit.
+There is a collaboration friction level of 9 between Quantum Computing Group and Climate Modeling Group.
+There is a collaboration friction level of 1 between Quantum Computing Group and Energy Systems Lab.
+There is a collaboration friction level of 2 between Quantum Computing Group and Materials Science Lab.
+There is a collaboration friction level of 3 between Quantum Computing Group and Autonomous Vehicles Lab.
+There is a collaboration friction level of 4 between Quantum Computing Group and Operations Research Group.
+There is a collaboration friction level of 5 between Quantum Computing Group and Statistics Department.
+There is a collaboration friction level of 6 between Quantum Computing Group and Applied Mathematics Unit.
+There is a collaboration friction level of 7 between Quantum Computing Group and High-Performance Computing Center.
+There is a collaboration friction level of 8 between Quantum Computing Group and Digital Ethics Institute.
+There is a collaboration friction level of 9 between Quantum Computing Group and Education Technology Lab.
+There is a collaboration friction level of 1 between Quantum Computing Group and Game Development Studio.
+There is a collaboration friction level of 2 between Quantum Computing Group and Smart Cities Research Hub.
+There is a collaboration friction level of 3 between Quantum Computing Group and Supply Chain Analytics Lab.
+There is a collaboration friction level of 4 between Quantum Computing Group and Econometrics Group.
+There is a collaboration friction level of 5 between Bioinformatics Unit and Cybersecurity Center.
+There is a collaboration friction level of 6 between Bioinformatics Unit and Data Science Institute.
+There is a collaboration friction level of 7 between Bioinformatics Unit and Human-Computer Interaction Lab.
+There is a collaboration friction level of 8 between Bioinformatics Unit and Computer Vision Group.
+There is a collaboration friction level of 9 between Bioinformatics Unit and Natural Language Processing Lab.
+There is a collaboration friction level of 1 between Bioinformatics Unit and Systems Engineering Dept.
+There is a collaboration friction level of 2 between Bioinformatics Unit and Embedded Systems Lab.
+There is a collaboration friction level of 3 between Bioinformatics Unit and Networks & Communications Group.
+There is a collaboration friction level of 4 between Bioinformatics Unit and Software Engineering Lab.
+There is a collaboration friction level of 5 between Bioinformatics Unit and Computational Biology Group.
+There is a collaboration friction level of 6 between Bioinformatics Unit and Medical Imaging Lab.
+There is a collaboration friction level of 7 between Bioinformatics Unit and FinTech Research Unit.
+There is a collaboration friction level of 8 between Bioinformatics Unit and Climate Modeling Group.
+There is a collaboration friction level of 9 between Bioinformatics Unit and Energy Systems Lab.
+There is a collaboration friction level of 1 between Bioinformatics Unit and Materials Science Lab.
+There is a collaboration friction level of 2 between Bioinformatics Unit and Autonomous Vehicles Lab.
+There is a collaboration friction level of 3 between Bioinformatics Unit and Operations Research Group.
+There is a collaboration friction level of 4 between Bioinformatics Unit and Statistics Department.
+There is a collaboration friction level of 5 between Bioinformatics Unit and Applied Mathematics Unit.
+There is a collaboration friction level of 6 between Bioinformatics Unit and High-Performance Computing Center.
+There is a collaboration friction level of 7 between Bioinformatics Unit and Digital Ethics Institute.
+There is a collaboration friction level of 8 between Bioinformatics Unit and Education Technology Lab.
+There is a collaboration friction level of 9 between Bioinformatics Unit and Game Development Studio.
+There is a collaboration friction level of 1 between Bioinformatics Unit and Smart Cities Research Hub.
+There is a collaboration friction level of 2 between Bioinformatics Unit and Supply Chain Analytics Lab.
+There is a collaboration friction level of 3 between Bioinformatics Unit and Econometrics Group.
+There is a collaboration friction level of 4 between Cybersecurity Center and Data Science Institute.
+There is a collaboration friction level of 5 between Cybersecurity Center and Human-Computer Interaction Lab.
+There is a collaboration friction level of 6 between Cybersecurity Center and Computer Vision Group.
+There is a collaboration friction level of 7 between Cybersecurity Center and Natural Language Processing Lab.
+There is a collaboration friction level of 8 between Cybersecurity Center and Systems Engineering Dept.
+There is a collaboration friction level of 9 between Cybersecurity Center and Embedded Systems Lab.
+There is a collaboration friction level of 1 between Cybersecurity Center and Networks & Communications Group.
+There is a collaboration friction level of 2 between Cybersecurity Center and Software Engineering Lab.
+There is a collaboration friction level of 3 between Cybersecurity Center and Computational Biology Group.
+There is a collaboration friction level of 4 between Cybersecurity Center and Medical Imaging Lab.
+There is a collaboration friction level of 5 between Cybersecurity Center and FinTech Research Unit.
+There is a collaboration friction level of 6 between Cybersecurity Center and Climate Modeling Group.
+There is a collaboration friction level of 7 between Cybersecurity Center and Energy Systems Lab.
+There is a collaboration friction level of 8 between Cybersecurity Center and Materials Science Lab.
+There is a collaboration friction level of 9 between Cybersecurity Center and Autonomous Vehicles Lab.
+There is a collaboration friction level of 1 between Cybersecurity Center and Operations Research Group.
+There is a collaboration friction level of 2 between Cybersecurity Center and Statistics Department.
+There is a collaboration friction level of 3 between Cybersecurity Center and Applied Mathematics Unit.
+There is a collaboration friction level of 4 between Cybersecurity Center and High-Performance Computing Center.
+There is a collaboration friction level of 5 between Cybersecurity Center and Digital Ethics Institute.
+There is a collaboration friction level of 6 between Cybersecurity Center and Education Technology Lab.
+There is a collaboration friction level of 7 between Cybersecurity Center and Game Development Studio.
+There is a collaboration friction level of 8 between Cybersecurity Center and Smart Cities Research Hub.
+There is a collaboration friction level of 9 between Cybersecurity Center and Supply Chain Analytics Lab.
+There is a collaboration friction level of 1 between Cybersecurity Center and Econometrics Group.
+There is a collaboration friction level of 2 between Data Science Institute and Human-Computer Interaction Lab.
+There is a collaboration friction level of 3 between Data Science Institute and Computer Vision Group.
+There is a collaboration friction level of 4 between Data Science Institute and Natural Language Processing Lab.
+There is a collaboration friction level of 5 between Data Science Institute and Systems Engineering Dept.
+There is a collaboration friction level of 6 between Data Science Institute and Embedded Systems Lab.
+There is a collaboration friction level of 7 between Data Science Institute and Networks & Communications Group.
+There is a collaboration friction level of 8 between Data Science Institute and Software Engineering Lab.
+There is a collaboration friction level of 9 between Data Science Institute and Computational Biology Group.
+There is a collaboration friction level of 1 between Data Science Institute and Medical Imaging Lab.
+There is a collaboration friction level of 2 between Data Science Institute and FinTech Research Unit.
+There is a collaboration friction level of 3 between Data Science Institute and Climate Modeling Group.
+There is a collaboration friction level of 4 between Data Science Institute and Energy Systems Lab.
+There is a collaboration friction level of 5 between Data Science Institute and Materials Science Lab.
+There is a collaboration friction level of 6 between Data Science Institute and Autonomous Vehicles Lab.
+There is a collaboration friction level of 7 between Data Science Institute and Operations Research Group.
+There is a collaboration friction level of 8 between Data Science Institute and Statistics Department.
+There is a collaboration friction level of 9 between Data Science Institute and Applied Mathematics Unit.
+There is a collaboration friction level of 1 between Data Science Institute and High-Performance Computing Center.
+There is a collaboration friction level of 2 between Data Science Institute and Digital Ethics Institute.
+There is a collaboration friction level of 3 between Data Science Institute and Education Technology Lab.
+There is a collaboration friction level of 4 between Data Science Institute and Game Development Studio.
+There is a collaboration friction level of 5 between Data Science Institute and Smart Cities Research Hub.
+There is a collaboration friction level of 6 between Data Science Institute and Supply Chain Analytics Lab.
+There is a collaboration friction level of 7 between Data Science Institute and Econometrics Group.
+There is a collaboration friction level of 8 between Human-Computer Interaction Lab and Computer Vision Group.
+There is a collaboration friction level of 9 between Human-Computer Interaction Lab and Natural Language Processing Lab.
+There is a collaboration friction level of 1 between Human-Computer Interaction Lab and Systems Engineering Dept.
+There is a collaboration friction level of 2 between Human-Computer Interaction Lab and Embedded Systems Lab.
+There is a collaboration friction level of 3 between Human-Computer Interaction Lab and Networks & Communications Group.
+There is a collaboration friction level of 4 between Human-Computer Interaction Lab and Software Engineering Lab.
+There is a collaboration friction level of 5 between Human-Computer Interaction Lab and Computational Biology Group.
+There is a collaboration friction level of 6 between Human-Computer Interaction Lab and Medical Imaging Lab.
+There is a collaboration friction level of 7 between Human-Computer Interaction Lab and FinTech Research Unit.
+There is a collaboration friction level of 8 between Human-Computer Interaction Lab and Climate Modeling Group.
+There is a collaboration friction level of 9 between Human-Computer Interaction Lab and Energy Systems Lab.
+There is a collaboration friction level of 1 between Human-Computer Interaction Lab and Materials Science Lab.
+There is a collaboration friction level of 2 between Human-Computer Interaction Lab and Autonomous Vehicles Lab.
+There is a collaboration friction level of 3 between Human-Computer Interaction Lab and Operations Research Group.
+There is a collaboration friction level of 4 between Human-Computer Interaction Lab and Statistics Department.
+There is a collaboration friction level of 5 between Human-Computer Interaction Lab and Applied Mathematics Unit.
+There is a collaboration friction level of 6 between Human-Computer Interaction Lab and High-Performance Computing Center.
+There is a collaboration friction level of 7 between Human-Computer Interaction Lab and Digital Ethics Institute.
+There is a collaboration friction level of 8 between Human-Computer Interaction Lab and Education Technology Lab.
+There is a collaboration friction level of 9 between Human-Computer Interaction Lab and Game Development Studio.
+There is a collaboration friction level of 1 between Human-Computer Interaction Lab and Smart Cities Research Hub.
+There is a collaboration friction level of 2 between Human-Computer Interaction Lab and Supply Chain Analytics Lab.
+There is a collaboration friction level of 3 between Human-Computer Interaction Lab and Econometrics Group.
+There is a collaboration friction level of 4 between Computer Vision Group and Natural Language Processing Lab.
+There is a collaboration friction level of 5 between Computer Vision Group and Systems Engineering Dept.
+There is a collaboration friction level of 6 between Computer Vision Group and Embedded Systems Lab.
+There is a collaboration friction level of 7 between Computer Vision Group and Networks & Communications Group.
+There is a collaboration friction level of 8 between Computer Vision Group and Software Engineering Lab.
+There is a collaboration friction level of 9 between Computer Vision Group and Computational Biology Group.
+There is a collaboration friction level of 1 between Computer Vision Group and Medical Imaging Lab.
+There is a collaboration friction level of 2 between Computer Vision Group and FinTech Research Unit.
+There is a collaboration friction level of 3 between Computer Vision Group and Climate Modeling Group.
+There is a collaboration friction level of 4 between Computer Vision Group and Energy Systems Lab.
+There is a collaboration friction level of 5 between Computer Vision Group and Materials Science Lab.
+There is a collaboration friction level of 6 between Computer Vision Group and Autonomous Vehicles Lab.
+There is a collaboration friction level of 7 between Computer Vision Group and Operations Research Group.
+There is a collaboration friction level of 8 between Computer Vision Group and Statistics Department.
+There is a collaboration friction level of 9 between Computer Vision Group and Applied Mathematics Unit.
+There is a collaboration friction level of 1 between Computer Vision Group and High-Performance Computing Center.
+There is a collaboration friction level of 2 between Computer Vision Group and Digital Ethics Institute.
+There is a collaboration friction level of 3 between Computer Vision Group and Education Technology Lab.
+There is a collaboration friction level of 4 between Computer Vision Group and Game Development Studio.
+There is a collaboration friction level of 5 between Computer Vision Group and Smart Cities Research Hub.
+There is a collaboration friction level of 6 between Computer Vision Group and Supply Chain Analytics Lab.
+There is a collaboration friction level of 7 between Computer Vision Group and Econometrics Group.
+There is a collaboration friction level of 8 between Natural Language Processing Lab and Systems Engineering Dept.
+There is a collaboration friction level of 9 between Natural Language Processing Lab and Embedded Systems Lab.
+There is a collaboration friction level of 1 between Natural Language Processing Lab and Networks & Communications Group.
+There is a collaboration friction level of 2 between Natural Language Processing Lab and Software Engineering Lab.
+There is a collaboration friction level of 3 between Natural Language Processing Lab and Computational Biology Group.
+There is a collaboration friction level of 4 between Natural Language Processing Lab and Medical Imaging Lab.
+There is a collaboration friction level of 5 between Natural Language Processing Lab and FinTech Research Unit.
+There is a collaboration friction level of 6 between Natural Language Processing Lab and Climate Modeling Group.
+There is a collaboration friction level of 7 between Natural Language Processing Lab and Energy Systems Lab.
+There is a collaboration friction level of 8 between Natural Language Processing Lab and Materials Science Lab.
+There is a collaboration friction level of 9 between Natural Language Processing Lab and Autonomous Vehicles Lab.
+There is a collaboration friction level of 1 between Natural Language Processing Lab and Operations Research Group.
+There is a collaboration friction level of 2 between Natural Language Processing Lab and Statistics Department.
+There is a collaboration friction level of 3 between Natural Language Processing Lab and Applied Mathematics Unit.
+There is a collaboration friction level of 4 between Natural Language Processing Lab and High-Performance Computing Center.
+There is a collaboration friction level of 5 between Natural Language Processing Lab and Digital Ethics Institute.
+There is a collaboration friction level of 6 between Natural Language Processing Lab and Education Technology Lab.
+There is a collaboration friction level of 7 between Natural Language Processing Lab and Game Development Studio.
+There is a collaboration friction level of 8 between Natural Language Processing Lab and Smart Cities Research Hub.
+There is a collaboration friction level of 9 between Natural Language Processing Lab and Supply Chain Analytics Lab.
+There is a collaboration friction level of 1 between Natural Language Processing Lab and Econometrics Group.
+There is a collaboration friction level of 2 between Systems Engineering Dept and Embedded Systems Lab.
+There is a collaboration friction level of 3 between Systems Engineering Dept and Networks & Communications Group.
+There is a collaboration friction level of 4 between Systems Engineering Dept and Software Engineering Lab.
+There is a collaboration friction level of 5 between Systems Engineering Dept and Computational Biology Group.
+There is a collaboration friction level of 6 between Systems Engineering Dept and Medical Imaging Lab.
+There is a collaboration friction level of 7 between Systems Engineering Dept and FinTech Research Unit.
+There is a collaboration friction level of 8 between Systems Engineering Dept and Climate Modeling Group.
+There is a collaboration friction level of 9 between Systems Engineering Dept and Energy Systems Lab.
+There is a collaboration friction level of 1 between Systems Engineering Dept and Materials Science Lab.
+There is a collaboration friction level of 2 between Systems Engineering Dept and Autonomous Vehicles Lab.
+There is a collaboration friction level of 3 between Systems Engineering Dept and Operations Research Group.
+There is a collaboration friction level of 4 between Systems Engineering Dept and Statistics Department.
+There is a collaboration friction level of 5 between Systems Engineering Dept and Applied Mathematics Unit.
+There is a collaboration friction level of 6 between Systems Engineering Dept and High-Performance Computing Center.
+There is a collaboration friction level of 7 between Systems Engineering Dept and Digital Ethics Institute.
+There is a collaboration friction level of 8 between Systems Engineering Dept and Education Technology Lab.
+There is a collaboration friction level of 9 between Systems Engineering Dept and Game Development Studio.
+There is a collaboration friction level of 1 between Systems Engineering Dept and Smart Cities Research Hub.
+There is a collaboration friction level of 2 between Systems Engineering Dept and Supply Chain Analytics Lab.
+There is a collaboration friction level of 3 between Systems Engineering Dept and Econometrics Group.
+There is a collaboration friction level of 4 between Embedded Systems Lab and Networks & Communications Group.
+There is a collaboration friction level of 5 between Embedded Systems Lab and Software Engineering Lab.
+There is a collaboration friction level of 6 between Embedded Systems Lab and Computational Biology Group.
+There is a collaboration friction level of 7 between Embedded Systems Lab and Medical Imaging Lab.
+There is a collaboration friction level of 8 between Embedded Systems Lab and FinTech Research Unit.
+There is a collaboration friction level of 9 between Embedded Systems Lab and Climate Modeling Group.
+There is a collaboration friction level of 1 between Embedded Systems Lab and Energy Systems Lab.
+There is a collaboration friction level of 2 between Embedded Systems Lab and Materials Science Lab.
+There is a collaboration friction level of 3 between Embedded Systems Lab and Autonomous Vehicles Lab.
+There is a collaboration friction level of 4 between Embedded Systems Lab and Operations Research Group.
+There is a collaboration friction level of 5 between Embedded Systems Lab and Statistics Department.
+There is a collaboration friction level of 6 between Embedded Systems Lab and Applied Mathematics Unit.
+There is a collaboration friction level of 7 between Embedded Systems Lab and High-Performance Computing Center.
+There is a collaboration friction level of 8 between Embedded Systems Lab and Digital Ethics Institute.
+There is a collaboration friction level of 9 between Embedded Systems Lab and Education Technology Lab.
+There is a collaboration friction level of 1 between Embedded Systems Lab and Game Development Studio.
+There is a collaboration friction level of 2 between Embedded Systems Lab and Smart Cities Research Hub.
+There is a collaboration friction level of 3 between Embedded Systems Lab and Supply Chain Analytics Lab.
+There is a collaboration friction level of 4 between Embedded Systems Lab and Econometrics Group.
+There is a collaboration friction level of 5 between Networks & Communications Group and Software Engineering Lab.
+There is a collaboration friction level of 6 between Networks & Communications Group and Computational Biology Group.
+There is a collaboration friction level of 7 between Networks & Communications Group and Medical Imaging Lab.
+There is a collaboration friction level of 8 between Networks & Communications Group and FinTech Research Unit.
+There is a collaboration friction level of 9 between Networks & Communications Group and Climate Modeling Group.
+There is a collaboration friction level of 1 between Networks & Communications Group and Energy Systems Lab.
+There is a collaboration friction level of 2 between Networks & Communications Group and Materials Science Lab.
+There is a collaboration friction level of 3 between Networks & Communications Group and Autonomous Vehicles Lab.
+There is a collaboration friction level of 4 between Networks & Communications Group and Operations Research Group.
+There is a collaboration friction level of 5 between Networks & Communications Group and Statistics Department.
+There is a collaboration friction level of 6 between Networks & Communications Group and Applied Mathematics Unit.
+There is a collaboration friction level of 7 between Networks & Communications Group and High-Performance Computing Center.
+There is a collaboration friction level of 8 between Networks & Communications Group and Digital Ethics Institute.
+There is a collaboration friction level of 9 between Networks & Communications Group and Education Technology Lab.
+There is a collaboration friction level of 1 between Networks & Communications Group and Game Development Studio.
+There is a collaboration friction level of 2 between Networks & Communications Group and Smart Cities Research Hub.
+There is a collaboration friction level of 3 between Networks & Communications Group and Supply Chain Analytics Lab.
+There is a collaboration friction level of 4 between Networks & Communications Group and Econometrics Group.
+There is a collaboration friction level of 5 between Software Engineering Lab and Computational Biology Group.
+There is a collaboration friction level of 6 between Software Engineering Lab and Medical Imaging Lab.
+There is a collaboration friction level of 7 between Software Engineering Lab and FinTech Research Unit.
+There is a collaboration friction level of 8 between Software Engineering Lab and Climate Modeling Group.
+There is a collaboration friction level of 9 between Software Engineering Lab and Energy Systems Lab.
+There is a collaboration friction level of 1 between Software Engineering Lab and Materials Science Lab.
+There is a collaboration friction level of 2 between Software Engineering Lab and Autonomous Vehicles Lab.
+There is a collaboration friction level of 3 between Software Engineering Lab and Operations Research Group.
+There is a collaboration friction level of 4 between Software Engineering Lab and Statistics Department.
+There is a collaboration friction level of 5 between Software Engineering Lab and Applied Mathematics Unit.
+There is a collaboration friction level of 6 between Software Engineering Lab and High-Performance Computing Center.
+There is a collaboration friction level of 7 between Software Engineering Lab and Digital Ethics Institute.
+There is a collaboration friction level of 8 between Software Engineering Lab and Education Technology Lab.
+There is a collaboration friction level of 9 between Software Engineering Lab and Game Development Studio.
+There is a collaboration friction level of 1 between Software Engineering Lab and Smart Cities Research Hub.
+There is a collaboration friction level of 2 between Software Engineering Lab and Supply Chain Analytics Lab.
+There is a collaboration friction level of 3 between Software Engineering Lab and Econometrics Group.
+There is a collaboration friction level of 4 between Computational Biology Group and Medical Imaging Lab.
+There is a collaboration friction level of 5 between Computational Biology Group and FinTech Research Unit.
+There is a collaboration friction level of 6 between Computational Biology Group and Climate Modeling Group.
+There is a collaboration friction level of 7 between Computational Biology Group and Energy Systems Lab.
+There is a collaboration friction level of 8 between Computational Biology Group and Materials Science Lab.
+There is a collaboration friction level of 9 between Computational Biology Group and Autonomous Vehicles Lab.
+There is a collaboration friction level of 1 between Computational Biology Group and Operations Research Group.
+There is a collaboration friction level of 2 between Computational Biology Group and Statistics Department.
+There is a collaboration friction level of 3 between Computational Biology Group and Applied Mathematics Unit.
+There is a collaboration friction level of 4 between Computational Biology Group and High-Performance Computing Center.
+There is a collaboration friction level of 5 between Computational Biology Group and Digital Ethics Institute.
+There is a collaboration friction level of 6 between Computational Biology Group and Education Technology Lab.
+There is a collaboration friction level of 7 between Computational Biology Group and Game Development Studio.
+There is a collaboration friction level of 8 between Computational Biology Group and Smart Cities Research Hub.
+There is a collaboration friction level of 9 between Computational Biology Group and Supply Chain Analytics Lab.
+There is a collaboration friction level of 1 between Computational Biology Group and Econometrics Group.
+There is a collaboration friction level of 2 between Medical Imaging Lab and FinTech Research Unit.
+There is a collaboration friction level of 3 between Medical Imaging Lab and Climate Modeling Group.
+There is a collaboration friction level of 4 between Medical Imaging Lab and Energy Systems Lab.
+There is a collaboration friction level of 5 between Medical Imaging Lab and Materials Science Lab.
+There is a collaboration friction level of 6 between Medical Imaging Lab and Autonomous Vehicles Lab.
+There is a collaboration friction level of 7 between Medical Imaging Lab and Operations Research Group.
+There is a collaboration friction level of 8 between Medical Imaging Lab and Statistics Department.
+There is a collaboration friction level of 9 between Medical Imaging Lab and Applied Mathematics Unit.
+There is a collaboration friction level of 1 between Medical Imaging Lab and High-Performance Computing Center.
+There is a collaboration friction level of 2 between Medical Imaging Lab and Digital Ethics Institute.
+There is a collaboration friction level of 3 between Medical Imaging Lab and Education Technology Lab.
+There is a collaboration friction level of 4 between Medical Imaging Lab and Game Development Studio.
+There is a collaboration friction level of 5 between Medical Imaging Lab and Smart Cities Research Hub.
+There is a collaboration friction level of 6 between Medical Imaging Lab and Supply Chain Analytics Lab.
+There is a collaboration friction level of 7 between Medical Imaging Lab and Econometrics Group.
+There is a collaboration friction level of 8 between FinTech Research Unit and Climate Modeling Group.
+There is a collaboration friction level of 9 between FinTech Research Unit and Energy Systems Lab.
+There is a collaboration friction level of 1 between FinTech Research Unit and Materials Science Lab.
+There is a collaboration friction level of 2 between FinTech Research Unit and Autonomous Vehicles Lab.
+There is a collaboration friction level of 3 between FinTech Research Unit and Operations Research Group.
+There is a collaboration friction level of 4 between FinTech Research Unit and Statistics Department.
+There is a collaboration friction level of 5 between FinTech Research Unit and Applied Mathematics Unit.
+There is a collaboration friction level of 6 between FinTech Research Unit and High-Performance Computing Center.
+There is a collaboration friction level of 7 between FinTech Research Unit and Digital Ethics Institute.
+There is a collaboration friction level of 8 between FinTech Research Unit and Education Technology Lab.
+There is a collaboration friction level of 9 between FinTech Research Unit and Game Development Studio.
+There is a collaboration friction level of 1 between FinTech Research Unit and Smart Cities Research Hub.
+There is a collaboration friction level of 2 between FinTech Research Unit and Supply Chain Analytics Lab.
+There is a collaboration friction level of 3 between FinTech Research Unit and Econometrics Group.
+There is a collaboration friction level of 4 between Climate Modeling Group and Energy Systems Lab.
+There is a collaboration friction level of 5 between Climate Modeling Group and Materials Science Lab.
+There is a collaboration friction level of 6 between Climate Modeling Group and Autonomous Vehicles Lab.
+There is a collaboration friction level of 7 between Climate Modeling Group and Operations Research Group.
+There is a collaboration friction level of 8 between Climate Modeling Group and Statistics Department.
+There is a collaboration friction level of 9 between Climate Modeling Group and Applied Mathematics Unit.
+There is a collaboration friction level of 1 between Climate Modeling Group and High-Performance Computing Center.
+There is a collaboration friction level of 2 between Climate Modeling Group and Digital Ethics Institute.
+There is a collaboration friction level of 3 between Climate Modeling Group and Education Technology Lab.
+There is a collaboration friction level of 4 between Climate Modeling Group and Game Development Studio.
+There is a collaboration friction level of 5 between Climate Modeling Group and Smart Cities Research Hub.
+There is a collaboration friction level of 6 between Climate Modeling Group and Supply Chain Analytics Lab.
+There is a collaboration friction level of 7 between Climate Modeling Group and Econometrics Group.
+There is a collaboration friction level of 8 between Energy Systems Lab and Materials Science Lab.
+There is a collaboration friction level of 9 between Energy Systems Lab and Autonomous Vehicles Lab.
+There is a collaboration friction level of 1 between Energy Systems Lab and Operations Research Group.
+There is a collaboration friction level of 2 between Energy Systems Lab and Statistics Department.
+There is a collaboration friction level of 3 between Energy Systems Lab and Applied Mathematics Unit.
+There is a collaboration friction level of 4 between Energy Systems Lab and High-Performance Computing Center.
+There is a collaboration friction level of 5 between Energy Systems Lab and Digital Ethics Institute.
+There is a collaboration friction level of 6 between Energy Systems Lab and Education Technology Lab.
+There is a collaboration friction level of 7 between Energy Systems Lab and Game Development Studio.
+There is a collaboration friction level of 8 between Energy Systems Lab and Smart Cities Research Hub.
+There is a collaboration friction level of 9 between Energy Systems Lab and Supply Chain Analytics Lab.
+There is a collaboration friction level of 1 between Energy Systems Lab and Econometrics Group.
+There is a collaboration friction level of 2 between Materials Science Lab and Autonomous Vehicles Lab.
+There is a collaboration friction level of 3 between Materials Science Lab and Operations Research Group.
+There is a collaboration friction level of 4 between Materials Science Lab and Statistics Department.
+There is a collaboration friction level of 5 between Materials Science Lab and Applied Mathematics Unit.
+There is a collaboration friction level of 6 between Materials Science Lab and High-Performance Computing Center.
+There is a collaboration friction level of 7 between Materials Science Lab and Digital Ethics Institute.
+There is a collaboration friction level of 8 between Materials Science Lab and Education Technology Lab.
+There is a collaboration friction level of 9 between Materials Science Lab and Game Development Studio.
+There is a collaboration friction level of 1 between Materials Science Lab and Smart Cities Research Hub.
+There is a collaboration friction level of 2 between Materials Science Lab and Supply Chain Analytics Lab.
+There is a collaboration friction level of 3 between Materials Science Lab and Econometrics Group.
+There is a collaboration friction level of 4 between Autonomous Vehicles Lab and Operations Research Group.
+There is a collaboration friction level of 5 between Autonomous Vehicles Lab and Statistics Department.
+There is a collaboration friction level of 6 between Autonomous Vehicles Lab and Applied Mathematics Unit.
+There is a collaboration friction level of 7 between Autonomous Vehicles Lab and High-Performance Computing Center.
+There is a collaboration friction level of 8 between Autonomous Vehicles Lab and Digital Ethics Institute.
+There is a collaboration friction level of 9 between Autonomous Vehicles Lab and Education Technology Lab.
+There is a collaboration friction level of 1 between Autonomous Vehicles Lab and Game Development Studio.
+There is a collaboration friction level of 2 between Autonomous Vehicles Lab and Smart Cities Research Hub.
+There is a collaboration friction level of 3 between Autonomous Vehicles Lab and Supply Chain Analytics Lab.
+There is a collaboration friction level of 4 between Autonomous Vehicles Lab and Econometrics Group.
+There is a collaboration friction level of 5 between Operations Research Group and Statistics Department.
+There is a collaboration friction level of 6 between Operations Research Group and Applied Mathematics Unit.
+There is a collaboration friction level of 7 between Operations Research Group and High-Performance Computing Center.
+There is a collaboration friction level of 8 between Operations Research Group and Digital Ethics Institute.
+There is a collaboration friction level of 9 between Operations Research Group and Education Technology Lab.
+There is a collaboration friction level of 1 between Operations Research Group and Game Development Studio.
+There is a collaboration friction level of 2 between Operations Research Group and Smart Cities Research Hub.
+There is a collaboration friction level of 3 between Operations Research Group and Supply Chain Analytics Lab.
+There is a collaboration friction level of 4 between Operations Research Group and Econometrics Group.
+There is a collaboration friction level of 5 between Statistics Department and Applied Mathematics Unit.

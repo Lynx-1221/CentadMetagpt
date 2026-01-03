@@ -12,10 +12,10 @@ Zeta — 9
 Eta — 13
 Theta — 11
 Edges (unordered pair — bandwidth demand in Mbps):
-(Alphe, Beta) — 30
+(Alpha, Beta) — 30
 (Alpha, Gamma) — 20
 (Alpha, Delta) — 5
-(Alpa, Epsilon) — 12
+(Alpha, Epsilon) — 12
 (Beta, Gamma) — 25
 (Beta, Delta) — 8
 (Beta, Zeta) — 10
@@ -27,4 +27,10 @@ Edges (unordered pair — bandwidth demand in Mbps):
 (Zeta, Eta) — 11
 (Eta, Theta) — 9
 (Delta, Theta) — 4
+(Alpha, Eta) - 20
+(Beta, Epsilon) - 9
+(Gamma, Delta) - 17
+(Epsilon, Eta) - 19
+(Alpha, Theta) - 28
+(Beta, Theta) - 16
 (Any pair not listed has bandwidth demand 0.)

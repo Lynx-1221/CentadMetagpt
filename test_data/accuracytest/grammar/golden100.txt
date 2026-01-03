@@ -1,5 +1,6 @@
 Scenario:
 A hyperscale cloud operator runs 100 microservice clusters across a wide-area backbone. Each cluster has a known processing-capacity rating (in abstract compute units) and many pairs of clusters exchange measured daily traffic (average bandwidth in Mbps) for replication, state-sync, telemetry and control messages. The operations team must split the clusters into two synchronized deployment sites — Site North and Site South — so that the sum of bandwidths of links crossing the partition is maximized (i.e., high-traffic pairs are intentionally split to improve replication bandwidth and resilience). To maintain latency-sensitive workloads and even resource utilization, the difference in total processing capacity between Site North and Site South must not exceed 60 units. The team will evaluate partitions of the 100 clusters under this capacity-balance constraint and select the partition that yields the largest cross-site bandwidth (a large-scale weighted Max-Cut with a capacity constraint).
+Clusters (name — processing capacity)
 Cluster001 — 26
 Cluster002 — 20
 Cluster003 — 15
@@ -85,7 +86,7 @@ Cluster082 — 12
 Cluster083 — 26
 Cluster084 — 15
 Cluster085 — 12
-Cluster08* — 20
+Cluster086 — 20
 Cluster087 — 24
 Cluster088 — 18
 Cluster089 — 11
@@ -95,203 +96,202 @@ Cluster092 — 19
 Cluster093 — 13
 Cluster094 — 18
 Cluster095 — 11
-Cluster096 — 30
+Clustr096 — 30
 Cluster097 — 10
 Cluster098 — 22
-Cluster099 — 12
+Clustr099 — 12
 Cluster100 — 18
-(Total processing capacity = 1894 units; balance constraint ±60 units means each side should be within 947 ± 60.)
+(Total processing capacity = 1894 units; balance constraint ±60 unitsans each side  be within 947 ± 60.)
 Inter-cluster bandwidths (unordered pair — Mbps)
-(Only listed pairs have nonzero bandwidth. This is a sparse graph with 220 edges.)
-(Cluster001, Cluster002) — 13
-(Cluster001, Cluster00300) — 55
-(Cluster001, Cluster034) — 38
+(Only listed pairs have nonzero badth. This is a sparse graph with 220 edges.)
+(Cluer001, Cluster002) — 13
+(Cluster001, ter003) — 55
+(Cluster001, Cluter034) — 38
 (Cluster001, Cluster087) — 13
 (Cluster002, Cluster003) — 22
-(Cluster002, Cluster005) — 41
+(Cer002, Cluster005) — 41
 (Cluster002, Cluster007) — 7
 (Cluster003, Cluster007) — 54
 (Cluster003, Cluster011) — 20
-(Cluster004, Cluster006) — 36
-(Cluster004, Cluster015) — 9
-(Cluster005, Cluster012) — 39
+(Cluster004, Clus06) — 36
+(Cer004, Cluster015) — 9
+(Cluster005, Cler012) — 39
 (Cluster005, Cluster017) — 12
 (Cluster006, Cluster017) — 10
-(Cluster006, Cluster064) — 17
+(Cl006, Cluster064) — 17
 (Cluster007, Cluster026) — 35
-(Cluster007, Cluster059) — 27
-(Cluster008, Cluster034) — 11
+(Cluster007, Cer059) — 27
+(Cluster008, Clr034) — 11
 (Cluster008, Cluster016) — 6
-(Cluster009, Cluster037) — 29
+(Clr009, Cl37) — 29
 (Cluster009, Cluster099) — 44
 (Cluster010, Cluster029) — 20
-(Cluster010, Cluster027) — 8
-(Cluster011, Cluster030) — 46
-(Cluster011, Cluster040) — 28
-(Cluster012, Cluster030) — 17
+(Cluster010, Clr027) — 8
+(Cluster011, Cter030) — 46
+(Cer011, Cluster040) — 28
+(Clter012, Cluster030) — 17
 (Cluster012, Cluster044) — 12
 (Cluster013, Cluster028) — 58
-(Cluster013, Cluster035) — 18
+(r013, Cluster035) — 18
 (Cluster014, Cluster021) — 9
 (Cluster014, Cluster036) — 14
-(Cluster015, Cluster017) — 24
-(Cluster015, Cluster062) — 6
+(Cter015, Cluster017) — 24
+(Cluster015, Cler062) — 6
 (Cluster016, Cluster024) — 19
 (Cluster016, Cluster053) — 4
 (Cluster017, Cluster036) — 33
-(Cluster018, Cluster045) — 26
+(Cluster004ster018, Cluster045) — 26
 (Cluster018, Cluster074) — 7
 (Cluster019, Cluster048) — 21
 (Cluster019, Cluster082) — 10
-(Cluster020, Cluster033) — 40
+(Cluster020, Cer033) — 40
 (Cluster020, Cluster073) — 14
 (Cluster021, Cluster023) — 12
-(Cluster021, Cluster067) — 8
-(Cluster022, Cluster047) — 11
+(Cluster021, Clur067) — 8
+(Clr022, Cluster047) — 11
 (Cluster022, Cluster071) — 44
-(Cluster023, Cluster064) — 5
+(Cluster023, C064) — 5
 (Cluster023, Cluster093) — 29
 (Cluster024, Cluster075) — 15
 (Cluster024, Cluster088) — 10
-(Cluster025, Cluster061) — 9
+(Cl025, Cluster061) — 9
 (Cluster025, Cluster081) — 21
 (Cluster026, Cluster029) — 16
-(Cluster026, Cluster053) — 13
+(Cluster026, Cer053) — 13
 (Cluster027, Cluster041) — 12
-(Cluster027, Cluster056) — 49
-(Cluster028, Cluster033) — 22
+(Cter027, Cluster056) — 49
+(Cluer028, Cluster033) — 22
 (Cluster028, Cluster045) — 7
 (Cluster029, Cluster044) — 36
-(Cluster029, Cluster078) — 6
+(Cluster029, Cer078) — 6
 (Cluster030, Cluster061) — 8
 (Cluster030, Cluster065) — 27
 (Cluster031, Cluster052) — 5
-(Cluster031, Cluster068) — 14
-(Cluster032, Cluster066) — 44
+(Clur031, Cluster068) — 14
+(Cluster032, Cer066) — 44
 (Cluster032, Cluster096) — 9
-(Cluster033, Cluster084) — 11
+(Cluster033, ster084) — 11
 (Cluster033, Cluster087) — 6
 (Cluster034, Cluster035) — 37
-(Cluster034, Cluster079) — 10
+(Cluster034, Clr079) — 10
 (Cluster035, Cluster056) — 53
-(Cluster035, Cluster089) — 7
+(Cluster035, Cr089) — 7
 (Cluster036, Cluster057) — 19
-(Cluster036, Cluster087) — 9
+(Cter036, Cluster087) — 9
 (Cluster037, Cluster045) — 12
 (Cluster037, Cluster075) — 8
 (Cluster038, Cluster069) — 24
 (Cluster038, Cluster093) — 10
-(Cluster039, Cluster049) — 33
+(Cluster039, 49) — 33
 (Cluster039, Cluster073) — 5
 (Cluster040, Cluster052) — 18
-(Cluster040, Cluster071) — 6
+(Cluster040, Cter071) — 6
 (Cluster041, Cluster056) — 7
 (Cluster041, Cluster088) — 23
-(Cluster042, Cluster060) — 11
+(Cluster042, Cler060) — 11
 (Cluster042, Cluster099) — 8
 (Cluster043, Cluster055) — 28
-(Cluster043, Cluster080) — 10
+(Clur043, Cluster080) — 10
 (Cluster044, Cluster066) — 21
 (Cluster044, Cluster096) — 15
 (Cluster045, Cluster056) — 13
-(Cluster046, Cluster063) — 17
+(Cluster046, Cer063) — 17
 (Cluster046, Cluster089) — 6
-(Cluster047, Cluster072) — 9
+(Cluster047, Cler072) — 9
 (Cluster047, Cluster094) — 12
-(Cluster048, Cluster085) — 7
+(Cluster048, Cter085) — 7
 (Cluster048, Cluster098) — 16
-(Cluster049, Cluster068) — 11
+(Cluster049, Cluter068) — 11
 (Cluster049, Cluster091) — 14
-(Cluster050, Cluster067) — 26
+(Cluster050, Cr067) — 26
 (Cluster050, Cluster081) — 9
 (Cluster051, Cluster076) — 8
 (Cluster051, Cluster092) — 7
-(Cluster052, Cluster068) — 22
+(C052, Cluster068) — 22
 (Cluster052, Cluster099) — 6
-(Cluster053, Cluster061) — 14
+(Cluster053, Cr061) — 14
 (Cluster053, Cluster088) — 10
 (Cluster054, Cluster083) — 19
-(Cluster054, Cluster095) — 5
+(Cluster054, Cr095) — 5
 (Cluster055, Cluster072) — 16
 (Cluster055, Cluster086) — 12
-(Cluster056, Cluster074) — 35
+(Cluster056, Cer074) — 35
 (Cluster056, Cluster096) — 11
-(Cluster057, Cluster078) — 17
+(er057, Cluster078) — 17
 (Cluster057, Cluster082) — 9
-(Cluster058, Cluster085) — 7
-(Cluster058, Cluster093) — 20
+(Clu\r058, Cluster085) — 7
+(Cluster058, Cl]pter093) — 20
 (Cluster059, Cluster071) — 6
-(Cluster059, Cluster094) — 8
-(Cluster060, Cluster080) — 15
+(Cster059, Cluster094) — 8
+(Clu=ter060, Clr080) — 15
 (Cluster060, Cluster097) — 4
 (Cluster061, Cluster099) — 9
 (Cluster062, Cluster100) — 23
-(Cluster062, Cluster069) — 5
+(r062, Cluster069) — 5
 (Cluster063, Cluster077) — 13
 (Cluster063, Cluster084) — 10
-(Cluster064, Cluster075) — 27
+(Cluster064, Cler075) — 27
 (Cluster064, Cluster086) — 6
-(Cluster065, Cluster093) — 8
-(Cluster065, Cluster090) — 11
-(Cluster066, Cluster096) — 33
-(Cluster066, Cluster087) — 12
-(Cluster067, Cluster091) — 7
+(Clussder065, Cluster093) — 8
+(Cluster065, Cter090) — 11
+(Cluster066, Cer096) — 33
+(Clusti7er066, Cluster087) — 12
+(Cluster067, Cluer091) — 7
 (Cluster067, Cluster097) — 6
-(Cluster068, Cluster092) — 18
-(Cluster069, Cluster079) — 5
+(er068, Cluster092) — 18
+(Clustfdfer069, Cluster079) — 5
 (Cluster069, Cluster095) — 10
-(Cluster070, Cluster082) — 14
+(Clu070, Cluster082) — 14
 (Cluster070, Cluster094) — 4
 (Cluster071, Cluster100) — 21
 (Cluster072, Cluster089) — 9
-(Cluster073, Cluster080) — 8
+(Clr073, Clur080) — 8
 (Cluster073, Cluster086) — 13
-(Cluster074, Cluster099) — 11
-(Cluster075, Cluster088) — 7
-(Cluster076, Cluster098) — 12
+(Cluster074, Clust][er099) — 11
+(Cluster075, Clr088) — 7
+(Clus??ter076, Cluster098) — 12
 (Cluster076, Cluster090) — 6
 (Cluster077, Cluster097) — 10
-(Cluster077, Cluster100) — 5
+(Clr077, Cluster100) — 5
 (Cluster078, Cluster085) — 9
-(Cluster079, Cluster096) — 16
+(Cluster079, Clus39ter096) — 16
 (Cluster080, Cluster091) — 7
-(Cluster081, Cluster095) — 8
+(Cluster081, Clr095) — 8
 (Cluster082, Cluster093) — 11
-(Cluster083, Cluster096) — 14
-(Cluster083, Cluster094) — 6
-(Cluster084, Cluster097) — 9
+(Clu//ster083, Cluster096) — 14
+(Cluster083, Cter094) — 6
+(Cluster084, Clus][[ter097) — 9
 (Cluster085, Cluster092) — 13
-(Cluster086, Cluster089) — 10
+(Cl086, Cluster089) — 10
 (Cluster087, Cluster090) — 5
-(Cluster088, Cluster097) — 8
+(Clust/.er088, Cluster097) — 8
 (Cluster089, Cluster098) — 11
-(Cluster090, Cluster094) — 7
+(Cluster090, Cr094) — 7
 (Cluster091, Cluster100) — 12
-(Cluster092, Cluster099) — 6
+(Clust]=-'er092, Cster099) — 6
 (Cluster093, Cluster098) — 9
 (Cluster094, Cluster095) — 4
-(Cluster095, Cluster100) — 10
+(ter095, Cluster100) — 10
 (Cluster096, Cluster099) — 15
-(Cluster097, Cluster098) — 20
-(Cluster001, Cluster013) — 12
-(Cluster003, Cluster035) — 17
+(Cluster097, Clussdter098) — 20
+(Cluster001, Cer013) — 12
+(Cluer003, Cluster035) — 17
 (Cluster006, Cluster012) — 9
-(Cluster009, Cluster018) — 8
+(Cer009, Cluster018) — 8
 (Cluster014, Cluster048) — 10
 (Cluster016, Cluster031) — 11
-(Cluster019, Cluster044) — 6
+(Clustsder019, ster044) — 6
 (Cluster022, Cluster032) — 5
 (Cluster025, Cluster054) — 14
-(Cluster028, Cluster057) — 13
+(C028, Cluster057) — 13
 (Cluster034, Cluster056) — 8
-(Cluster038, Cluster046) — 12
+(Cluster038, Cl]=uster046) — 12
 (Cluster041, Cluster061) — 7
 (Cluster042, Cluster073) — 9
-(Cluster050, Cluster060) — 10
+(Cer050, Cluster060) — 10
 (Cluster051, Cluster066) — 16
-(Cluster058, Cluster072) — 6
+(Cluster058, Cr072) — 6
 (Cluster063, Cluster070) — 7
-(Cluster069, Cluster086) — 5
-(Cluster077, Cluster085) — 8
-(Cluster082, Cluster090) — 6
-(Cluster095, Cluster098) — 11
+(Clust';er069, Cluster086) — 5
+(Cluster077, Cster085) — 8
+(Cster082, Clus]-ter098) — 11

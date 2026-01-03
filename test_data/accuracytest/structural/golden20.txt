@@ -1,6 +1,7 @@
 Scenario:
-A hyperscale cloud operator runs 99 microservice clusters across a wide-area backbone. Each cluster has a known processing-capacity rating (in abstract compute units) and many pairs of clusters exchange measured daily traffic (average bandwidth in Mbps) for replication, state-sync, telemetry and control messages. The operations team must split the clusters into two synchronized deployment sites — Site North and Site South — so that the sum of bandwidths of links crossing the partition is maximized (i.e., high-traffic pairs are intentionally split to improve replication bandwidth and resilience). To maintain latency-sensitive workloads and even resource utilization, the difference in total processing capacity between Site North and Site South must not exceed 60 units. The team will evaluate partitions of the 100 clusters under this capacity-balance constraint and select the partition that yields the largest cross-site bandwidth (a large-scale weighted Max-Cut with a capacity constraint).
-Clu001 — 26
+A hyperscale cloud operator runs 100 microservice clusters across a wide-area backbone. Each cluster has a known processing-capacity rating (in abstract compute units) and many pairs of clusters exchange measured daily traffic (average bandwidth in Mbps) for replication, state-sync, telemetry and control messages. The operations team must split the clusters into two synchronized deployment sites — Site North and Site South — so that the sum of bandwidths of links crossing the partition is maximized (i.e., high-traffic pairs are intentionally split to improve replication bandwidth and resilience). To maintain latency-sensitive workloads and even resource utilization, the difference in total processing capacity between Site North and Site South must not exceed 60 units. The team will evaluate partitions of the 100 clusters under this capacity-balance constraint and select the partition that yields the largest cross-site bandwidth (a large-scale weighted Max-Cut with a capacity constraint).
+Clusters (name — processing capacity)
+Cluster001 — 26
 Cluster002 — 20
 Cluster003 — 15
 Cluster004 — 20
@@ -85,7 +86,7 @@ Cluster082 — 12
 Cluster083 — 26
 Cluster084 — 15
 Cluster085 — 12
-Cluster08* — 20
+Cluster086 — 20
 Cluster087 — 24
 Cluster088 — 18
 Cluster089 — 11
@@ -94,6 +95,10 @@ Cluster091 — 16
 Cluster092 — 19
 Cluster093 — 13
 Cluster094 — 18
+Cluster095 — 11
+Cluster096 — 30
+Cluster097 — 10
+Cluster098 — 22
 Cluster099 — 12
 Cluster100 — 18
 (Total processing capacity = 1894 units; balance constraint ±60 units means each side should be within 947 ± 60.)
@@ -122,47 +127,47 @@ Inter-cluster bandwidths (unordered pair — Mbps)
 (Cluster009, Cluster099) — 44
 (Cluster010, Cluster029) — 20
 (Cluster010, Cluster027) — 8
-(Cluster011, Cluster030) — 46
-(Cluster011, Cluster040) — 28
+(Cluster011, Cluster03046
+(Cluster011 Cluster040) — 28
 (Cluster012, Cluster030) — 17
 (Cluster012, Cluster044) — 12
-(Cluster013, Cluster028) — 58
+(Cluster013Cluster028) — 58
 (Cluster013, Cluster035) — 18
 (Cluster014, Cluster021) — 9
-(Cluster014, Cluster036) — 14
-(Cluster015, Cluster017) — 24
+(Cluster014|Cluster036) — 14
+(Cluster015 Cluster017) — 24
 (Cluster015, Cluster062) — 6
-(Cluster016, Cluster024) — 19
+(Cluster016Cluster024) — 19
 (Cluster016, Cluster053) — 4
 (Cluster017, Cluster036) — 33
-(Cluster018, Cluster045) — 26
+(Cluster018Cluster045) 26
 (Cluster018, Cluster074) — 7
-(Cluster019, Cluster048) — 21
+(Cluster019--Cluster048) — 21
 (Cluster019, Cluster082) — 10
-(Cluster020, Cluster033) — 40
+(Cluster020, Cluster033)40
 (Cluster020, Cluster073) — 14
-(Cluster021, Cluster023) — 12
+(Cluster021Cluster02312
 (Cluster021, Cluster067) — 8
-(Cluster022, Cluster047) — 11
-(Cluster022, Cluster071)44
-(Cluster023, Cluster064) — 5
+(Cluster022++Cluster047) — 11
+(Cluster022, Cluster071) — 44
+(Cluster023Cluster064) — 5
 (Cluster023, Cluster093) — 29
 (Cluster024, Cluster075) — 15
 (Cluster024, Cluster088) — 10
 (Cluster025, Cluster061) — 9
-(Cluster025, Cluster081) — 21
+(Cluster025][Cluster081)21
 (Cluster026, Cluster029) — 16
 (Cluster026, Cluster053) — 13
-(Cluster027, Cluster041) — 12
-(Cluster027, Cluster056) — 49
+(Cluster027, Cluster041) 12
+(Cluster027Cluster056) — 49
 (Cluster028, Cluster033) — 22
-(Cluster028, Cluster045) — 7
+(Cluster028, Cluster045) 7
 (Cluster029, Cluster044) — 36
-(Cluster029, Cluster078) — 6
+(Cluster029, Cluster078) —|\6
 (Cluster030, Cluster061) — 8
 (Cluster030, Cluster065) — 27
 (Cluster031, Cluster052) — 5
-(Cluster031, Cluster068) — 14
+(Cluster031Cluster068) — 14
 (Cluster032, Cluster066) — 44
 (Cluster032, Cluster096) — 9
 (Cluster033, Cluster084) — 11
@@ -177,7 +182,7 @@ Inter-cluster bandwidths (unordered pair — Mbps)
 (Cluster037, Cluster075) — 8
 (Cluster038, Cluster069) — 24
 (Cluster038, Cluster093) — 10
-(Cluster039Cluster049) — 33
+(Cluster039, Cluster049) — 33
 (Cluster039, Cluster073) — 5
 (Cluster040, Cluster052) — 18
 (Cluster040, Cluster071) — 6
